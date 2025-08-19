@@ -1,3 +1,7 @@
+import Hero from "@/components/sections/Hero";
+
 export default function HomePage() {
-  return <main className="text-red-500">Home Page</main>;
+  return <main className="overflow-hidden">
+    <Hero />
+  </main>;
 }
