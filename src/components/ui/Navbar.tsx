@@ -58,11 +58,11 @@ export function Navbar() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/">Home</Link>
+            <Link href="/" className="text-[16px] font-[400] font-sans">Home</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>About us</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-[16px] font-[400] font-sans">About us</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
@@ -78,7 +78,7 @@ export function Navbar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Our Services</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-[16px] font-[400] font-sans">Our Services</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-4">
               <li>
@@ -112,13 +112,13 @@ export function Navbar() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs">Premium logistics</Link>
+            <Link href="/docs" className="text-[16px] font-[400] font-sans">Premium logistics</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs">Contact us</Link>
+            <Link href="/docs" className="text-[16px] font-[400] font-sans">Contact us</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${montserrat.variable}`}>
       <body
-  className={`antialiased overflow-hidden` }
+  className={`antialiased` }
       >
        <Header/>
         {children}
