@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "tertiary" | "outline";
   size?: "sm" | "md" | "lg";
 }
 
@@ -11,6 +11,7 @@ const baseStyles = "inline-flex items-center justify-center font-medium rounded 
 const variantStyles: Record<string, string> = {
   primary: "bg-[#EA5C2B] text-[#FFFFFF] hover:bg-[#D95A2B]",
   secondary: "bg-[#EFEFEF] text-[#000000] hover:bg-gray-300 border-[1px] border-[#E5E7EB]",
+  tertiary: "bg-[#323232] group-hover:bg-[#EA5C2B]  text-[#ffffff] ",
   outline: "border border-gray-300 text-gray-900 hover:bg-gray-100",
 };
 

@@ -10,7 +10,7 @@ export default function Hero() {
           <h1 className="font-display text-[75px]/[82px] font-bold text-[#FFFFFF] tracking-[0.02em]">
           Ubakco delivers from airport to anywhere
         </h1>
-        <p className="font-sans text-[#323232] text-[20px]">
+        <p className="font-sans text-[#323232] text-[20px] text-[#323232]">
           From standard delivery to white-glove logistics. We move goods with
           precision, care, and a commitment to excellence across Nigeria and
           beyond.
@@ -18,7 +18,7 @@ export default function Hero() {
         <Button className="flex items-center gap-[12px] w-[209px] h-[55px]">
           Request a Quote{" "}
           <Image
-            src="/images/arrow-angled.png"
+            src="/icons/arrow-angled.png"
             alt="arrow"
             width={24}
             height={24}
@@ -27,7 +27,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="h-full w-full flex relative">
-      <Image src="/images/Hero-image.png" alt="Hero Image" width={725} height={1024} className="w-full h-full relative top-[64px] object-cover" />
+      <Image src="/images/hero-img.png" alt="Hero Image" width={725} height={1024} className="w-full h-full relative top-[64px] object-cover" />
       <Image src="/images/dash.png" alt="dash" width={100} height={100} className="w-[20px] h-[802px] right-[98%] absolute"/>
       </div>
     </section>

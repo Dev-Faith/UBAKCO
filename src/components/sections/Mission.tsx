@@ -53,7 +53,7 @@ const Mission = () => {
         <Button className="w-[209px] h-[55px] flex items-center gap-[12px]">
           Our Mission{" "}
           <Image
-            src="/images/arrow-angled.png"
+            src="/icons/arrow-angled.png"
             alt="arrow"
             width={24}
             height={24}
