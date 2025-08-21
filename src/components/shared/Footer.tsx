@@ -1,3 +1,85 @@
+import Image from "next/image";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 export default function Footer() {
-  return <footer>Footer</footer>;
+  const quickLinks = [
+    { title: "Home", url: "#" },
+    { title: "About", url: "#" },
+    { title: "Services", url: "#" },
+    { title: "Track Package", url: "#" },
+    { title: "Request a Quote", url: "#" },
+    { title: "Blog", url: "#" },
+  ];
+  const servicesLinks =[
+    { title: "Nationwide delivery", url: "#" },
+    { title: "Corporate Cargo", url: "#" },
+    { title: "Import/Export", url: "#" }, 
+    { title: "Premium & White Glove", url: "#" }, 
+    { title: "Airport Services", url: "#" }, 
+    { title: "Last Mile delivery", url: "#" }, 
+  ]
+  const businesshourLink =[
+    "Monday - Friday: 8:00 AM - 6:00 PM",
+   "Saturday: 9:00 AM - 4:00 PM",
+  ]
+
+
+  return <footer className="bg-[#000000] px-[60px] pt-[100px] flex flex-col gap-[100px]">
+   <div className="flex justify-between">
+    <div className="flex flex-col gap-[32px]">
+      <Image src="/images/footerLogo.png" alt="Logo" width={215} height={56} />
+      <p className="w-[375px] font-sans font-regular text-[18px]/[40px] text-[#B2B2B2]">Nigeria's premier logistics partner, delivering excellence and reliability across the nation for over 12 years.</p>
+    </div>
+    <div className="flex gap-[100px]">
+      <div>
+        <p className="font-display text-[24px] font-semibold text-[#ffffff]">Quick Links</p>
+        <nav className="flex flex-col gap-[40px] mt-[16px] text-[18px]/[40px] text-[#B2B2B2] ">
+          {quickLinks.map(link => (
+            <a key={link.title} href={link.url} className="block text-[#B2B2B2] hover:text-white">
+              {link.title}
+            </a>
+          ))}
+        </nav>
+      </div>
+      <div>
+        <p className="font-display text-[24px] font-semibold text-[#ffffff]">Services</p>
+        <nav className="flex flex-col gap-[40px] mt-[16px] text-[18px]/[40px] text-[#B2B2B2] ">
+          {servicesLinks.map(link => (
+            <a key={link.title} href={link.url} className="block text-[#B2B2B2] hover:text-white">
+              {link.title}
+            </a>
+          ))}
+        </nav>
+      </div>
+      <div>
+        <p className="font-display text-[24px] font-semibold text-[#ffffff]">Busines Hours</p>
+        <nav className="flex flex-col gap-[40px] mt-[16px] text-[18px]/[40px] text-[#B2B2B2] ">
+          {businesshourLink.map(link => (
+           <p key={link} className=" text-[#B2B2B2]">{link}</p>
+          ))}
+        </nav>
+        <div className= "mt-[51px] flex flex-col gap-[40px]">
+          <h1 className="text-white font-display text-[24px] font-semibold">Follow Us</h1>
+          <div className="flex gap-[32px] text-[24px] ">
+            <FaFacebookF className="text-[#B2B2B2] hover:text-white" />
+            <FaInstagram className="text-[#B2B2B2] hover:text-white" />
+            <FaXTwitter className="text-[#B2B2B2] hover:text-white" />
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div className="pt-[40px] border-t-1 border-white/10 text-white/70 flex items-center justify-between w-full text-[18px] pb-[100px]">
+    <p>© 2025 Ubakco. All rights reserved.</p>
+    <div className="flex items-center gap-[24px]">
+      <p>Privacy Policy</p>
+      <p>|</p>
+      <p>Terms of Service</p>
+      <p>|</p>
+      <p>Cookies Settings</p>
+    </div>
+   </div>
+  </footer>;
 }
