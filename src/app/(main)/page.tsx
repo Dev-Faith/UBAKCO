@@ -1,3 +1,4 @@
+import CTA from "@/components/sections/CTA";
 import Features from "@/components/sections/Features";
 import Hero from "@/components/sections/Hero";
 import Mission from "@/components/sections/Mission";
@@ -13,5 +14,6 @@ export default function HomePage() {
     <Records />
     <Trusted />
     <Testimonial />
+    <CTA/>
   </main>;
 }

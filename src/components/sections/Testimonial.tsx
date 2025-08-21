@@ -168,7 +168,7 @@ const Testimonial = () => {
     },
   ];
   return (
-    <section className="bg-[#EFEFEF] pb-[113px]  overflow-hidden">
+    <section className="bg-[#EFEFEF] pb-[113px]  overflow-hidden pb-[319px]">
       <div className="relative  pt-[150px]  pl-[60px] flex items-start justify-between overflow-hidden">
         <div className="left flex flex-col gap-[64px] ">
           <h1 className="text-[75px]/[94px] font-bold tracking-[0.02em] w-[918px] font-display text-[#000000] z-9">
