@@ -33,7 +33,7 @@ export default function Features() {
     },
   ]
   return (
-    <section className="bg-[#EFEFEF] rounded-tl-[50px] rounded-tr-[50px] overflow-hidden">
+    <section className="bg-[#EFEFEF] rounded-tl-[50px] pb-[113px] rounded-tr-[50px] overflow-hidden">
       <div className="relative  pt-[150px]  pl-[60px] flex items-start justify-between overflow-hidden">
         <div className="left flex flex-col gap-[64px] ">
           <h1 className="text-[75px]/[94px] font-bold tracking-[0.02em] w-[918px] font-display text-[#000000] z-9">
@@ -56,9 +56,10 @@ export default function Features() {
         </div>
       </div>
       <div className="px-[60px] w-full mt-[100px]">
-        <div className="separator w-full border-t border-[#CACACA] px-[40px] py-[75px] grid grid-cols-2 gap-y-[115px] relative">
+        <div className="separator w-full border-t border-[#CACACA] px-[20px] py-[75px] grid grid-cols-2 gap-y-[115px] relative">
           {featuresCardItems.map((item, index)=><FeatureCard key={index} icon={item.icon} title={item.title} desc={item.desc} subDesc={item.subDesc} separator={item.separator}/>)}
            <div className="separator h-[1px] absolute w-full bg-[#CACACA] top-[50%]"></div>
+           <div className="separator h-[1px] absolute w-full bg-[#CACACA] bottom-0"></div>
         </div>
       </div>
     </section>
