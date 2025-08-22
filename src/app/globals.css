@@ -136,6 +136,12 @@
   mix-blend-mode: soft-light;
 }
 
+@media screen and (min-width: 1280px) {
+  .mission {
+    max-height:1029px
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

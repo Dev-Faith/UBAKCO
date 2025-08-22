@@ -19,7 +19,7 @@ const FeatureCard = ({icon, title, desc, subDesc, separator}:featureCardProps) =
         <p className="text-[#656565] text-[18px]/[32px] font-sans">{subDesc}</p>
       </div>
       <Button variant="tertiary" className='flex items-center gap-[12px] w-[209px]'>Request a Quote <Image src="/icons/requestBox.png" alt="requestBox icon" height={24} width={24}/></Button>
-      {separator && <div className="separator h-[80%] right-[-24px] absolute w-[1px] bg-[#CACACA] self-center top-[50px]"></div>}
+      {separator && <div className="separator h-[80%] right-[-6%]  absolute w-[1px] bg-[#CACACA] self-center top-[50px]"></div>}
     </div>
   )
 }
