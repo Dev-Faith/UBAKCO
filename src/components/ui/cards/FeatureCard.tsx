@@ -7,11 +7,12 @@ interface featureCardProps {
     title:string;
     desc: string;
     subDesc: string;
-    separator?:boolean
+    separator?:boolean,
+    className?: string;
 }
-const FeatureCard = ({icon, title, desc, subDesc, separator}:featureCardProps) => {
+const FeatureCard = ({icon, title, desc, subDesc, separator, className}:featureCardProps) => {
   return (
-    <div className={` relative group flex flex-col gap-[24px] w-[578px] hover:bg-[#F8DCD2] px-[40px] pt-[32px] pb-[72px] rounded-tl-[20px] rounded-tr-[60px] rounded-bl-[20px] rounded-br-[20px]`}>
+    <div className={` relative group flex flex-col gap-[24px] w-[578px] hover:bg-[#F8DCD2] px-[40px] pt-[32px] pb-[72px] rounded-tl-[20px] rounded-tr-[60px] rounded-bl-[20px] rounded-br-[20px] ${className}`}>
       <Image src={icon} alt= "icon" width={48} height={48}/>
       <div className="texts w-[516px] flex flex-col gap-[18px]">
         <h3 className="text-[32px] font-dislay font-semibold">{title}</h3>

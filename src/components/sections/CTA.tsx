@@ -2,11 +2,11 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/buttons/Button";
 
-const CTA = () => {
+const CTA = ({className}:{className?:string}) => {
   return (
-    <div className="flex justify-center w-screen">
+    <div className={`flex justify-center w-screen ${className}`}>
       <div className="bg-white">
-        <div className="flex flex-col items-center relative top-[calc(297px-493px)] pb-[230px]">
+        <div className="flex flex-col items-center relative top-[calc(297px-493px)] ">
           <Image
             src="/images/CTA.png"
             alt="Call to Action"

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 
 import {
@@ -13,6 +14,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -53,74 +55,35 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
+  
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About us" },
+    { href: "/services", label: "Our Services" },
+    { href: "/premium", label: "Premium logistics" },
+    { href: "/contact", label: "Contact us" },
+  ];
+
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/" className="text-[16px] font-[400] font-sans">Home</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-[16px] font-[400] font-sans">About us</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-[16px] font-[400] font-sans">Our Services</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[300px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <div className="font-medium">Components</div>
-                    <div className="text-muted-foreground">
-                      Browse all components in the library.
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <div className="font-medium">Documentation</div>
-                    <div className="text-muted-foreground">
-                      Learn how to use the library.
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <div className="font-medium">Blog</div>
-                    <div className="text-muted-foreground">
-                      Read our latest blog posts.
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs" className="text-[16px] font-[400] font-sans">Premium logistics</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs" className="text-[16px] font-[400] font-sans">Contact us</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+        {navItems.map((item) => (
+          <NavigationMenuItem key={item.href}>
+            <NavigationMenuLink 
+              asChild 
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "focus:bg-transparent focus:text-inherit focus-visible:ring-0 focus-visible:outline-none focus:ring-0 outline-none",
+                pathname === item.href && "text-[#EA5C2B] font-semibold border-b-2 border-[#EA5C2B] bg-transparent hover:bg-transparent rounded-b-none"
+              )}
+            >
+              <Link href={item.href} className="text-[16px] font-[400] font-sans focus:outline-none focus:ring-0">
+                {item.label}
+              </Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   );

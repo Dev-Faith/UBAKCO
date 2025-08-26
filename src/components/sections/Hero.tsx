@@ -3,7 +3,7 @@ import { Button } from "../ui/buttons/Button";
 
 export default function Hero() {
   return (
-    <section className="sticky top-0 bg-[#DCDEE0] w-full xl:w-screen xl:w-[1440px] h-screen xl:h-[872px] flex overflow-hidden -z-10 xl:justify-center">
+    <section className="sticky top-0 bg-[#DCDEE0] w-full xl:w-screen xl:w-[1440px] h-screen xl:h-[872px] flex overflow-hidden -z-10 justify-center">
       <div className="flex w-full xl:w-[1440px]">
         <Image
           src="/images/gradient.png"
@@ -13,7 +13,7 @@ export default function Hero() {
         />
         <div className="left-hero w-full h-full px-[60px] pt-[180px] pb-[130px] flex flex-col justify-between-[48px]">
           <div className="w-[559px] flex flex-col gap-[48px]">
-            <h1 className="font-display text-[75px]/[82px] font-bold text-[#FFFFFF] tracking-[0.02em]">
+            <h1 className="font-display text-[75px]/[82px] font-bold text-[#1C1C1C] tracking-[0.02em]">
               Ubakco delivers from airport to anywhere
             </h1>
             <p className="font-sans text-[#323232] text-[20px] text-[#323232]">
