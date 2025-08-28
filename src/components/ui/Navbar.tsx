@@ -61,7 +61,7 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About us" },
     { href: "/services", label: "Our Services" },
-    { href: "/premium", label: "Premium logistics" },
+    { href: "/features", label: "Premium logistics" },
     { href: "/contact", label: "Contact us" },
   ];
 

@@ -14,8 +14,8 @@ const CTA = ({className}:{className?:string}) => {
             height={493}
             className="w-[1200px] h-[493px] object-cover"
           />
-          <div className=" absolute left-[250px] top-[80px] flex flex-col gap-[30px]">
-            <h1 className="text-[52px]/[62.4px] w-[549px] font-bold font-display text-[#ffff]">
+          <div className=" absolute left-[10%] top-[15%] flex flex-col gap-[30px]">
+            <h1 className="text-[52px]/[62.4px] w-[549px] tracking-[-0.02em] font-bold font-display text-[#ffff]">
               Let’s make your next delivery effortless
             </h1>
             <p className="font-sans text-[#ffff] w-[539px] text-[16px] font-regular">
