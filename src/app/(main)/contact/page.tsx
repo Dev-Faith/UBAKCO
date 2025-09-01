@@ -1,3 +1,15 @@
+import Contactus from "@/components/sections/Contactus";
+import Map from "@/components/sections/Map";
+import RequestQuote from "@/components/sections/RequestQuote";
+import WedLove from "@/components/sections/WedLove";
+import Footer from "@/components/shared/Footer";
+
 export default function ContactPage() {
-  return <main>Contact Page</main>;
+  return <main className="">
+    <Contactus />
+    <WedLove />
+    <Map />
+    <RequestQuote formOffset={false} bg="[#EDEDED]" className="pb-[514px]" />
+    <Footer/>
+  </main>;
 }

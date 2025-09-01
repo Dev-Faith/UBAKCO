@@ -35,7 +35,7 @@ const PremiumOfferings = () => {
   ]
 
   return (
-     <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px] pb-[514px] rounded-tr-[50px] overflow-hidden">
+     <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px] pb-[514px] rounded-tr-[50px] overflow-hidden ">
       <div className="relative  pt-[150px]  pl-[60px] 2xl:pl-[120px] flex items-start justify-between overflow-hidden">
         <div className="left flex flex-col gap-[64px] ">
           <h1 className="text-[60px]/[72px] font-semibold tracking-[0.02em] w-[918px] font-display text-[#000000] z-9 ">

@@ -3,11 +3,11 @@ import QuoteRequestForm from "../ui/forms/QuoteRequestForm";
 import Image from "next/image";
 import { Button } from "../ui/buttons/Button";
 
-const RequestQuote = () => {
+const RequestQuote = ({className, formOffset=true, bg="white"}:{className?:string, formOffset?:boolean, bg?:string}) => {
   return (
-    <section className="w-screen bg-white flex justify-center">
+    <section className={`w-screen bg-${bg} flex justify-center ${className}`}>
       <div className="">
-        <div className="flex flex-col items-center relative top-[calc(297px-650px)] rounded-[32px]">
+        <div className={`flex flex-col items-center relative ${formOffset ? "top-[calc(297px-650px)]" : ""} rounded-[32px]`}>
           <Image
             src="/images/request.png"
             alt="Call to Action"
