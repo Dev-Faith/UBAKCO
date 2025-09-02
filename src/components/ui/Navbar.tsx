@@ -66,7 +66,7 @@ export function Navbar() {
   ];
 
   return (
-    <NavigationMenu viewport={false}>
+    <NavigationMenu viewport={false} className="hidden lg:block">
       <NavigationMenuList>
         {navItems.map((item) => (
           <NavigationMenuItem key={item.href}>

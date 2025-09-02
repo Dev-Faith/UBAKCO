@@ -7,7 +7,7 @@ const MissionLabel = ({title, className, variant, offset}:{title: string, classN
 
     const variantClass = variant === "primary" ? primary : secondary;
   return (
-    <div className={clsx("px-[24px] py-[10px] text-[#FFFFFF] text-[16px] font-sans font-[400] rounded-[100px]", offset, variantClass, className) }>
+    <div className={clsx("lg:px-[24px] px-[11.82px] lg:py-[10px] py-[4.93px] text-[#FFFFFF] lg:text-[16px] text-[7.88px] font-sans font-[400] rounded-[100px]", offset, variantClass, className) }>
       <p>{title}</p>
     </div>
   )

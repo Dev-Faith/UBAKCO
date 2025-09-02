@@ -33,19 +33,19 @@ export default function Features() {
     },
   ]
   return (
-    <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px] pb-[113px] rounded-tr-[50px] overflow-hidden">
-      <div className="relative  pt-[150px]  pl-[60px] 2xl:pl-[120px] flex items-start justify-between overflow-hidden">
-        <div className="left flex flex-col gap-[64px] ">
-          <h1 className="text-[75px]/[94px] font-bold tracking-[0.02em] w-[918px] font-display text-[#000000] z-9 ">
+    <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px]  lg:pb-[113px] rounded-tr-[50px] overflow-hidden">
+      <div className="relative  lg:pt-[150px] pt-[70px] px-[16px] lg:pl-[60px] 2xl:pl-[120px] flex items-start justify-between overflow-hidden">
+        <div className="left flex flex-col lg:gap-[64px] gap-[24px] ">
+          <h1 className=" text-[32px]/[48px] lg:text-[75px]/[94px] font-bold tracking-[-0.02em] w-[370px] lg:w-[918px] font-display text-[#000000] z-9 ">
             Complete Logistics Solutions
           </h1>
-          <p className="font-sans text-[#323232] text-[28px] w-[516px]">
+          <p className="font-sans text-[#656565] lg:text-[28px]/[42px] text-[18px]/[27px] lg:w-[516px]">
             Ubakco offers tailored logistics built on trust and performance.
             Every delivery, big or small is managed with the precision our
             clients expect.
           </p>
         </div>
-        <div className="overflow-hidden absolute w-[600px] h-full bg-[#EFEFEF] top-0 right-[-64px]">
+        <div className="overflow-hidden absolute w-[600px] h-full bg-[#EFEFEF] top-0 right-[-64px] hidden lg:block">
           <Image
             src="/images/Logomark.png"
             alt="Ubakco Logo"
@@ -55,11 +55,13 @@ export default function Features() {
           />
         </div>
       </div>
-      <div className="px-[60px] w-full mt-[100px] flex justify-center">
-        <div className="separator w-[1800px] mx-auto border-t border-[#CACACA] px-[20px] py-[75px] grid grid-cols-2 gap-y-[115px] relative justify-items-center ">
-          {featuresCardItems.map((item, index)=><FeatureCard key={index} icon={item.icon} title={item.title} desc={item.desc} subDesc={item.subDesc} separator={item.separator}/>)}
-           <div className="separator h-[1px] absolute w-full bg-[#CACACA] top-[50%]"></div>
-           <div className="separator h-[1px] absolute w-full bg-[#CACACA] bottom-0"></div>
+      <div className="px-[60px] w-full mt-[54px] lg:mt-[100px] flex justify-center">
+        <div className="separator w-[1800px] mx-auto lg:border-t border-[#CACACA] px-[20px] py-[75px] lg:grid lg:grid-cols-2 lg:gap-y-[115px] flex flex-col relative justify-items-center ">
+          {featuresCardItems.map((item, index)=><div  key={index}  className={`${featuresCardItems.length-1 !== index ? 'border-b-[1px] lg:border-none border-[#CACACA]' : ''}  pb-[24px] lg:pb-0 `}>
+            <FeatureCard icon={item.icon} title={item.title} desc={item.desc} subDesc={item.subDesc} separator={item.separator} className={`${index==0 && "bg-[#F8DCD2] lg:bg-[#EFEFEF]"}`}/>
+          </div>)}
+           <div className="separator h-[1px] absolute w-full bg-[#CACACA] top-[50%] hidden lg:block"></div>
+           <div className="separator h-[1px] absolute w-full bg-[#CACACA] bottom-0 hidden lg:block"></div>
         </div>
       </div>
     </section>

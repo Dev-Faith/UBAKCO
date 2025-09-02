@@ -26,9 +26,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#000000] w-screen flex justify-center">
-      <div className="bg-[#000000] px-[60px] pt-[100px] flex flex-col gap-[100px]">
-        <div className="flex justify-between">
+    <footer className="bg-[#000000] w-screen flex flex-col lg:flex-row justify-center">
+      <div className="bg-[#000000] px-[16px] lg:px-[60px] pt-[100px] flex flex-col gap-[100px]">
+        <div className="flex flex-col lg:flex-row justify-between">
           <div className="flex flex-col gap-[32px]">
             <Image
               src="/images/footerLogo.png"
@@ -41,7 +41,7 @@ export default function Footer() {
               reliability across the nation for over 12 years.
             </p>
           </div>
-          <div className="flex gap-[100px]">
+          <div className="flex flex-col lg:flex-row gap-[100px] mt-[60px] lg:mt-0">
             <div>
               <p className="font-display text-[24px] font-semibold text-[#ffffff]">
                 Quick Links
@@ -98,9 +98,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="pt-[40px] border-t-1 border-white/10 text-white/70 flex items-center justify-between w-full text-[18px] pb-[100px]">
+        <div className="pt-[40px] border-t-1 border-white/10 text-white/70 flex items-center justify-center lg:justify-between w-full text-[18px] pb-[100px]">
           <p>© 2025 Ubakco. All rights reserved.</p>
-          <div className="flex items-center gap-[24px]">
+          <div className="lg:flex items-center gap-[24px] hidden">
             <p>Privacy Policy</p>
             <p>|</p>
             <p>Terms of Service</p>

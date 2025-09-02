@@ -8,14 +8,14 @@ import Trusted from "@/components/sections/Trusted";
 import Footer from "@/components/shared/Footer";
 
 export default function HomePage() {
-  return <main className="h-[300vh] scrollbar-hide">
+  return <main className="h-[300vh] scrollbar-hide overflow-x-hidden">
     <Hero />
     <Mission/>
     <Features />
     <Records />
     <Trusted />
     <Testimonial />
-    <CTA/>
+    <CTA className="py-[120px] lg:py-0" offset="lg:top-[calc(297px-493px)]"/>
     <Footer />
   </main>;
 }
