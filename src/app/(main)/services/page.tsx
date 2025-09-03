@@ -5,7 +5,7 @@ import CTA from "@/components/sections/CTA";
 import Footer from "@/components/shared/Footer";
 
 export default function ServicesPage() {
-  return <main>
+  return <main className="overflow-hidden">
     <Services />
     <Features />
     <RequestQuote />

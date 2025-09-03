@@ -115,28 +115,28 @@ const WhyPremiumTrust = () => {
   }, []);
 
   return (
-    <section className="pt-[120px] bg-white px-[60px] pb-[320px]">
-      <h1 className="font-display text-[42px]/[54.6px] tracking-[0.02em] font-bold w-[717px]">
+    <section className="pt-[120px] bg-white px-[16px] lg:px-[60px] pb-[320px]">
+      <h1 className="font-display text-[32px]/[48px] lg:text-[42px]/[54.6px] tracking-[-0.02em] font-bold w-[370px] lg:w-[717px]">
         Why Premium Clients Trust Ubakco?
       </h1>
-      <div className="grid grid-cols-2 gap-y-[120px] mt-[70px] relative h-[320px]">
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-[120px] gap-y-[24px] mt-[70px] relative h-[320px]">
         {records.map((record, index) => (
           <div
             key={index}
             className={`flex items-center gap-[16px] ${
               record.separation
-                ? "pr-[104px] border-[#CACACA] border-r-[1px]"
-                : "pl-[104px]"
+                ? "lg:pr-[104px] pb-[24px] lg:pb-0 border-[#CACACA] border-b-[1px] lg:border-b-0 lg:border-r-[1px]"
+                : `lg:pl-[104px] pb-[24px] lg:pb-0 border-[#CACACA] ${ index < records.length - 1 ? "border-b-[1px]" : ""} lg:border-b-0 `
             }`}
           >
-            <Image src="icons/star.svg" alt="star" width={40} height={40} />
-            <h2 className="text-[28px]/[42px] tracking-[0.05em] w-[443.33px]">
+            <Image src="icons/star.svg" alt="star" width={40} height={40} className="size-[40px]" />
+            <h2 className="  text-[20px]/[30px] lg:text-[28px]/[42px] tracking-[0.05em] w-[443.33px]">
               {record.title}
             </h2>
-            {record.separation && <hr />}
+            {record.separation && <hr className="hidden lg:block" />}
           </div>
         ))}
-        <div className="absolute top-[50%] h-[1px] w-full bg-[#CACACA]"></div>
+        <div className="absolute top-[50%] h-[1px] w-full bg-[#CACACA] hidden lg:block"></div>
       </div>
       {/* Carousel with fading shadows */}
       <div className="carousel w-full overflow-x-hidden mt-[120px] relative" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
