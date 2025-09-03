@@ -5,7 +5,7 @@ import WedLove from "@/components/sections/WedLove";
 import Footer from "@/components/shared/Footer";
 
 export default function ContactPage() {
-  return <main className="">
+  return <main className="overflow-hidden">
     <Contactus />
     <WedLove />
     <Map />
