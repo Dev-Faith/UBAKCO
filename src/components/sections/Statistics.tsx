@@ -24,26 +24,38 @@ const Statistics = () => {
   ];
   return (
     <section className=" pt-[100px] px-[60px] pb-[188px] bg-[#EFEFEF]">
-      <div className="flex items-center justify-between gap-[24px] py-[40px] border-y-[1px] border-[#CACACA]">
-        {statistics.map((stat, index) => (
-          <div key={index} className={`flex flex-col gap-[40px] ${index !== statistics.length - 1 ? "border-r border-[#C4C4C4] pr-[0px]" : ""}`}>
-            <div className="flex flex-col gap-[32px]">
-              <Image src={stat.icon} alt={stat.title} width={48} height={48} />
-              <h2 className="text-[32px] font-semibold font-sans">
-                {stat.title}
-              </h2>
-            </div>
-            <div className="flex flex-col gap-[28px]">
-              <p className="text-[28px] font-semibold font-display text-[#323232] ">
-                {stat.subtitle}
-              </p>
-              <p className="text-[24px] font-[300] font-display text-[#323232]">
-                {stat.label}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
+       <div className="relative border-y-[1px] border-[#CACACA] py-[40px] mt-[55px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-[41px] lg:gap-0">
+                <div className="separator w-[1px] left-[calc(100%/3)] absolute h-[70%] bg-[#CACACA] hidden lg:block"></div>
+                <div className="separator w-[1px] right-[30%] absolute h-[70%] bg-[#CACACA] hidden lg:block"></div>
+                {statistics.map((record, index) => (
+                  <div  key={index} className={`${index !== statistics.length -1 ? "border-b-[1px] lg:border-none border-[#CACACA] pb-[41px]" : ""}`}>
+                    <div  
+                      className="flex flex-col gap-[40px] lg:gap-[56px]"
+                    >
+                      <div className="flex flex-col gap-[32px] lg:gap-[48px]">
+                        <Image
+                          src={record.icon}
+                          alt={record.title}
+                          width={40}
+                          height={40}
+                          className="w-[48px] h-[48px]"
+                        />
+                        <h1 className="lg:text-[56px] text-[32px] font-semibold lg:font-bold lg:font-display font-sans">
+                          {record.title}
+                        </h1>
+                      </div>
+                      <div className="flex flex-col gap-[28px]">
+                        <p className="lg:text-[32px] text-[24px] font-semibold text-[#323232] font-display">
+                          {record.subtitle}
+                        </p>
+                        <p className="lg:text-[24px] text-[20px]/[30px]  font-[400] font-sans text-[#323232] w-[266px] lg:w-[278px]">
+                          {record.label}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
     </section>
   );
 };

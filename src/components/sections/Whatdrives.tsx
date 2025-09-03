@@ -13,17 +13,17 @@ const Whatdrives = () => {
         }
     ]
   return (
-    <section className="bg-[#EFEFEF] pt-[120px] pb-[100px] px-[60px] relative overflow-hidden">
-      <h1 className="w-[265px] font-bold text-[42px]/[54.6px] font-display tracking-[-0.02em]">What Drives Ubacko</h1>
-      <div className="flex  items-center justify-between mt-[70px]">
+    <section className="bg-[#EFEFEF] pt-[70px] lg:pt-[120px] lg:pb-[100px] px-[16px] lg:px-[60px] relative overflow-hidden">
+      <h1 className="w-[198px] lg:w-[265px] font-semibold lg:font-bold text-[32px]/[48px] lg:text-[42px]/[54.6px] font-display tracking-[-0.02em]">What Drives Ubacko</h1>
+      <div className="flex flex-col  lg:flex-row items-center gap-[24px] lg:justify-between mt-[70px]">
         {driveList.map((drive, index) => (
-          <div key={index} className="w-[516px] flex flex-col gap-[16px]">
-            <h1 className="text-[#EA5C2B] text-[32px]/[42px] font-bold tracking-[0.02em] font-display">{drive.title}</h1>
+          <div key={index} className="lg:w-[516px] w-[370px] flex flex-col gap-[16px]">
+            <h1 className="text-[#EA5C2B] text-[26px]/[42px]  text-[32px]/[42px] font-bold tracking-[0.02em] font-display">{drive.title}</h1>
             <p className="text-[18px]/[32px] font-sans font-[400] tracking-[0.05em] ">{drive.desc}</p>
           </div>
         ))}
       </div>
-      <Image src="/images/logomark.png" alt="What Drives Ubacko" height={100} width={100} className="absolute top-[-50%] right-0 soft-light-effect w-[567px] h-[537.62px]" />
+      <Image src="/images/Logomark.png" alt="What Drives Ubacko" height={100} width={100} className="absolute lg:top-[-50%] lg:right-0 top-0 right-0 soft-light-effect w-[289px] h-[274px] lg:w-[567px] lg:h-[537.62px]" />
     </section>
   );
 };

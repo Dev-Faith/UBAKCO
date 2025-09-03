@@ -72,34 +72,34 @@ const AboutusTrusted = () => {
   );
 
   return (
-    <section className="pt-[120px] pl-[60px]">
+    <section className="pt-[120px] px-[16px] lg:pl-[60px]">
       <div>
-        <h1 className="text-[42px]/[54.6px] font-bold tracking-[-0.02em] font-display w-[358px]">
+        <h1 className=" text-[32px]/[48px] lg:text-[42px]/[54.6px] font-semibold lg:font-bold tracking-[-0.02em] font-display w-[268px] lg:w-[358px]">
           Trusted by Industry Leaders
         </h1>
-        <p className="text-[28px]/[42px] font-[400] font-sans tracking-[0.05em] text-[#323232] w-[628px] mt-[32px]">
+        <p className=" text-[18px]/[27px] lg:text-[28px]/[42px] font-[400] font-sans tracking-[0.05em] text-[#656565] w-[370px] lg:w-[628px] mt-[24px] lg:mt-[32px]">
           Proud to serve Nigeria's most prestigious companies and organizations
         </p>
       </div>
       <div
         ref={carouselRef}
-        className="about-carousel mt-[70px] flex items-center gap-[32px] pb-[138px] overflow-x-auto overflow-y-hidden pr-[40px]"
+        className="about-carousel mt-[70px] flex flex-col lg:flex-row items-center gap-[32px] pb-[138px] lg:overflow-x-auto overflow-y-hidden lg:pr-[40px]"
         style={carouselStyle}
       >
         {carouselItems.map((items, index) => (
           <div
             key={index}
-            className="relative px-[40px]  py-[60px] text-white  min-w-[596px] min-h-[812px] flex flex-col justify-between"
+            className="relative px-[40px]  py-[60px] text-white min-h-[490px] w-full  lg:min-w-[596px] lg:min-h-[812px] flex flex-col justify-between"
           >
             <Image
               src={items.image}
               alt={items.title}
               width={500}
               height={300}
-              className="rounded-[40px] top-0 left-0 w-full h-full absolute z-[-1] w-[596px] h-[812px]"
+              className="rounded-[40px] top-0 left-0 w-full h-full object-cover absolute z-[-1] w-[350px] lg:w-[596px] h-[490px] lg:h-[812px]"
             />
             <div className="flex items-center justify-between ">
-              <p className="text-[40px]/[42px] tracking-[0.05em] font-semibold font-display line-clamp-2">
+              <p className=" text-[24px]/36px] lg:text-[40px]/[42px] w-[190px] lg:w-full tracking-[0.05em] font-semibold font-display line-clamp-2">
                 {items.title}
               </p>{" "}
               <Image
@@ -109,7 +109,7 @@ const AboutusTrusted = () => {
                 height={80}
               />
             </div>
-            <p>{items.desc}</p>
+            <p className="text-[16px]/[24px] w-[330px]">{items.desc}</p>
           </div>
         ))}
       </div>
