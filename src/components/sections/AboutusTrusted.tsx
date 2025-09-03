@@ -89,7 +89,7 @@ const AboutusTrusted = () => {
         {carouselItems.map((items, index) => (
           <div
             key={index}
-            className="relative px-[40px]  py-[60px] text-white min-h-[490px] w-full  lg:min-w-[596px] lg:min-h-[812px] flex flex-col justify-between"
+            className="relative px-[20px] lg:px-[40px]  py-[60px] text-white min-h-[490px] w-full  lg:min-w-[596px] lg:min-h-[812px] flex flex-col justify-between"
           >
             <Image
               src={items.image}
@@ -109,7 +109,7 @@ const AboutusTrusted = () => {
                 height={80}
               />
             </div>
-            <p className="text-[16px]/[24px] w-[330px]">{items.desc}</p>
+            <p className="text-[16px]/[24px] lg:text-[28px]/[42px] w-[330px] lg:w-[516px]">{items.desc}</p>
           </div>
         ))}
       </div>

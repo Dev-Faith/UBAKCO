@@ -202,7 +202,7 @@ const QuoteRequestForm = ({className}:{className?:string}) => {
   };
 
   return (
-    <div className={ clsx ("bg-white rounded-[20px] p-[40px] max-w-[500px] w-full shadow-lg", className)}>
+    <div className={ clsx ("bg-white rounded-[20px] p-[40px] lg:max-w-[500px] w-[337px] lg:w-full shadow-lg", className)}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-[20px]">
         {/* Full Name Input */}
         <div>
