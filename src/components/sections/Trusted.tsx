@@ -92,11 +92,11 @@ const Trusted = () => {
   return (
     <section className="2xl:w-screen flex justify-center bg-white">
       <div className=" mt-[130px]  w-full 2xl:w-[1440px] relative pb-[150px] ">
-        <div className="flex flex-col gap-[24px] lg:gap-[32px] px-[16px] lg:px-[60px] 2xl:px-[120px]">
-          <h1 className="font-display lg:text-[60px]/[72px] text-[32px]/[48px] tracking-[-0.02em] font-semibold lg:font-bold w-[370px] lg:w-[550px]">
+        <div className="flex flex-col gap-[24px] lg:gap-[32px] px-[16px] md:px-[60px] lg:px-[60px] 2xl:px-[120px]">
+          <h1 className="font-display lg:text-[60px]/[72px] text-[32px]/[48px] md:text-[42px]/[54.6px] tracking-[-0.02em] font-semibold lg:font-bold w-[370px] lg:w-[550px] md:w-[364px]">
             Trusted by Industry Leaders
           </h1>
-          <p className="text-[18px]/[27px] lg:text-[28px]/[42px]  font-sans font-regular w-[370px] lg:w-[623px]">
+          <p className="text-[18px]/[27px] lg:text-[28px]/[42px]  font-sans font-regular w-[370px] lg:w-[623px] md:w-[623px]">
             Ubakco offers tailored logisitics built  on trust and performance. Every delivery, big or small is managed with the precision our clients expect.
           </p>
         </div>

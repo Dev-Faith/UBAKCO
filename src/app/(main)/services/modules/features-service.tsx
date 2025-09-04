@@ -53,7 +53,7 @@ export default function Features() {
     },
   ];
   return (
-    <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px] lg:pb-[113px] rounded-tr-[50px] overflow-hidden pb-[490px] mt-[-32px] lg:mt-0">
+    <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px] lg:pb-[514px] rounded-tr-[50px] overflow-hidden pb-[490px] mt-[-32px] lg:mt-0">
       <div className="relative  pt-[110px] pl-[60px] 2xl:pl-[120px]">
         <div className="overflow-hidden absolute w-[600px] h-[752px] bg-[#EFEFEF] top-0 right-[-64px]">
           <Image
@@ -66,13 +66,13 @@ export default function Features() {
         </div>
       </div>
       <div className="px-[60px] w-full mt-[100px] flex justify-center">
-        <div className="separator w-[1800px] mx-auto border-t border-[#CACACA] px-[20px] py-[75px] grid grid-cols-1 lg:grid-cols-2 lg:gap-y-[115px] gap-y-[24px] relative justify-items-center ">
+        <div className="separator w-[1800px] mx-auto border-t border-[#CACACA] px-[20px] py-[75px] grid grid-cols-1 lg:grid-cols-2 lg:gap-y-[115px] gap-y-[24px] lg:gap-x-[24px] relative justify-items-center ">
           {featuresCardItems.map((item, index) => (
             <div
               key={index}
               className={`${
                 featuresCardItems.length - 1 !== index
-                  ? "border-b-[1px] lg:border-none border-[#CACACA]"
+                  ? `${index!==5 && index !==1 && index !==3  && "lg:border-r-[1px] lg:pr-[24px]"} border-b-[1px] lg:border-b-0  border-[#CACACA]`
                   : ""
               }  pb-[24px] lg:pb-0 `}
             >

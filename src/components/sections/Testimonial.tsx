@@ -153,17 +153,17 @@ const Testimonial = () => {
     },
   ];
   return (
-    <div className="flex justify-center 2xl:w-screen bg-[#EFEFEF] pb-[500px]">
+    <div className="flex justify-center 2xl:w-screen bg-[#EFEFEF] pb-[500px] md:h-[1417.84px]">
       <section
         ref={sectionRef}
         className="2xl:w-[1440px]"
       >
-        <div className="relative  lg:pt-[150px] pt-[60px] px-[16px] lg:pl-[60px] 2xl:pl-[120px] flex items-start justify-between overflow-hidden">
+        <div className="relative  lg:pt-[150px] pt-[60px] md:px-[60px] px-[16px] lg:pl-[60px] 2xl:pl-[120px] flex items-start justify-between overflow-hidden">
           <div className="left flex flex-col gap-[24px] lg:gap-[64px] ">
-            <h1 className="lg:text-[42px]/[54.6px] text-[32px]/[48px] font-semibold lg:font-bold tracking-[-0.02em] w-[363px] font-display text-[#000000] z-9">
+            <h1 className="lg:text-[42px]/[54.6px] text-[32px]/[48px] md:w-[374px] font-semibold lg:font-bold md:font-bold tracking-[-0.02em] w-[363px] font-display text-[#000000] z-9">
               What Clients Say About Ubakco
             </h1>
-            <p className="font-sans text-[#656565] text-[18px]/[27px] font-[400] lg:text-[28px]/[42px] w-[370px] lg:w-[516px]">
+            <p className="font-sans text-[#656565] text-[18px]/[27px] font-[400] lg:text-[28px]/[42px] w-[370px] md:w-[498px] lg:w-[516px]">
               Feedback from businesses and individuals who rely on Ubacko for
               fat, secure, and professional delivery.
             </p>
@@ -178,7 +178,7 @@ const Testimonial = () => {
             />
           </div>
         </div>
-        <div className="w-screen mt-[100px] relative h-[934px]">
+        <div className="w-screen mt-[100px] relative h-[934px]  md:px-[60px]">
           <Image
             src="/images/testShadowLeft.png"
             alt="Shadow Left"

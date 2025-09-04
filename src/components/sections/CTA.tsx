@@ -11,29 +11,29 @@ const CTA = ({
 }) => {
   return (
     <div className={`flex justify-center w-screen ${className}`}>
-      <div className="px-[16px] bg-white">
+      <div className="px-[16px] md:px-[60px] bg-white lg:w-full lg:h-full">
         <div
-          className={`flex w-full rounded-[32px] lg:rounded-[16px] overflow-hidden flex-col items-center relative ${offset}`}
+          className={`flex w-full rounded-[32px] lg:rounded-[16px] md:w-full md:h-full overflow-hidden flex-col items-center relative ${offset}`}
         >
           <Image
             src="/images/CTA.png"
             alt="Call to Action"
             width={1200}
             height={493}
-            className="w-[1200px] h-[493px] object-cover relative rounded-[32px] lg:rounded-[16px] hidden lg:block"
+            className="lg:w-[1200px] md:w-[714px] md:h-[375px] lg:h-[493px] object-cover relative rounded-[32px] md:w-[714px] lg:rounded-[16px] hidden  md:block lg:block"
           />
           <Image
             src="/images/mobileCTA.png"
             alt="Call to Action"
             width={1200}
             height={493}
-            className="w-[369px] h-[453px] object-cover relative rounded-[32px] lg:rounded-[16px] lg:hidden"
+            className="w-[369px] h-[453px] object-cover relative rounded-[32px] lg:rounded-[16px] md:hidden lg:hidden"
           />
-          <div className=" absolute lg:left-[10%] top-[15%] flex flex-col gap-[30px]  ">
-            <h1 className="lg:text-[52px]/[62.4px] w-[269px] text-[32px]/[41.6px] lg:w-[549px] tracking-[-0.02em] font-bold font-display text-[#ffff]">
+          <div className=" absolute lg:left-[10%] md:left-[60px] top-[15%] md:top-[80px md:h-[375px] flex flex-col gap-[30px]">
+            <h1 className="lg:text-[52px]/[62.4px] w-[269px] md:w-[346px] md:text-[32px]/[41.6px] text-[32px]/[41.6px] lg:w-[549px] tracking-[-0.02em] font-bold font-display text-[#ffff]">
               Let’s make your next delivery effortless
             </h1>
-            <p className="font-sans text-[#ffff] w-[337px] lg:w-[539px] text-[16px]/[24px] font-regular">
+            <p className="font-sans text-[#ffff] w-[337px] lg:w-[539px] text-[16px]/[24px] font-regular md:text-[16px]/24px] md:w-[416px]">
               Feedback from businesses and individuals who rely on Ubacko for
               fast, secure, and professional delivery.
             </p>

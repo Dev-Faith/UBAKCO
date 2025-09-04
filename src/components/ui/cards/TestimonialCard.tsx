@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 const TestimonialCard = ({image, rating, quote, name, office}:{image: string, rating: string, quote: string, name: string, office: string}) => {
   return (
-    <div className=" w-[370px] lg:w-[580px] p-[32px] bg-[#ffffff] rounded-[30px] shadow-[0_0_40px_0_rgba(0,0,0,0.25)]">
+    <div className=" w-[370px] lg:w-[580px] md:w-full p-[32px] bg-[#ffffff] rounded-[30px] shadow-[0_0_40px_0_rgba(0,0,0,0.25)]">
       <div className="flex items-center justify-between">
         <Image
           src={image}
@@ -20,7 +20,7 @@ const TestimonialCard = ({image, rating, quote, name, office}:{image: string, ra
           </span>
         </p>
       </div>
-      <p className="lg:text-[26px] text-[20px]/[30px] w-[306px] font-sans font-regular lg:w-[516px] w-[306px] mt-[48px]">
+      <p className="lg:text-[26px] text-[20px]/[30px] w-[306px] md:w-full font-sans font-regular lg:w-[516px] w-[306px] mt-[48px]">
         {quote}
       </p>
       <div className="mt-[32px]">

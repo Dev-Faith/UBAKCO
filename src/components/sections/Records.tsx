@@ -24,7 +24,7 @@ const Records = () => {
   ];
   return (
     <section className="2xl:w-screen 2xl:flex justify-center bg-white">
-      <div className="lg:pt-[150px] pt-[47px] px-[16px] lg:px-[60px] 2xl:px-[120px] 2xl:w-[1440px]">
+      <div className="lg:pt-[150px] pt-[47px] px-[16px] md:px-[60px] lg:px-[60px] 2xl:px-[120px] 2xl:w-[1440px] ">
         <h1 className=" text-[32px]/[48px] tracking-[-0.02em] lg:text-[42px]/[54.6px] font-semibold lg:font-bold font-display w-[209px] lg:w-[450px]">
           Proven Track Records
         </h1>

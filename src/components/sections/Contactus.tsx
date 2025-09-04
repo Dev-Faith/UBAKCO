@@ -25,9 +25,9 @@ const Contactus = () => {
         height={100}
         className="absolute lg:bottom-0 bottom-[20px] right-0 h-[550px]"
       />
-      <div className="absolute top-[50%] lg:top-[35%] left-[10%]">
-        <h1 className="text-white font-bold font-display text-[24px]/[36px] lg:text-[48px]/[62.4px] tracking-[0.02em]">Contact Ubakco</h1>
-        <p className="font-[400] text-white text-[14px]/[21px] lg:text-[18px]/[27px]">Let’s get your shipment moving.</p>
+      <div className="absolute top-[50%] lg:top-[35%] left-[10%] md:top-[40%]">
+        <h1 className="text-white font-bold font-display text-[24px]/[36px] lg:text-[48px]/[62.4px] tracking-[-0.02em] md:text-[48px]/[62.4px] ">Contact Ubakco</h1>
+        <p className="font-[400] text-white text-[14px]/[21px] lg:text-[18px]/[27px] md:text-[18px]/[27px]">Let’s get your shipment moving.</p>
       </div>
     </section>
   );
