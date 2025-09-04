@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TestimonialCard from "../ui/cards/TestimonialCard";
@@ -152,21 +153,39 @@ const Testimonial = () => {
       office: "CEO, Spotify",
     },
   ];
+  const ref = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } });
+    }
+  }, [inView, controls]);
+
   return (
-    <div className="flex justify-center 2xl:w-screen bg-[#EFEFEF] pb-[500px] md:h-[1417.84px]">
+    <div className="flex justify-center 2xl:w-screen bg-[#EFEFEF] pb-[500px] lg:pb-[500px] md:h-[1417.84px]">
       <section
         ref={sectionRef}
         className="2xl:w-[1440px]"
       >
         <div className="relative  lg:pt-[150px] pt-[60px] md:px-[60px] px-[16px] lg:pl-[60px] 2xl:pl-[120px] flex items-start justify-between overflow-hidden">
-          <div className="left flex flex-col gap-[24px] lg:gap-[64px] ">
-            <h1 className="lg:text-[42px]/[54.6px] text-[32px]/[48px] md:w-[374px] font-semibold lg:font-bold md:font-bold tracking-[-0.02em] w-[363px] font-display text-[#000000] z-9">
+          <div ref={ref} className="left flex flex-col gap-[24px] lg:gap-[64px] ">
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={controls}
+              className="lg:text-[42px]/[54.6px] text-[32px]/[48px] md:w-[374px] font-semibold lg:font-bold md:font-bold tracking-[-0.02em] w-[363px] font-display text-[#000000] z-9"
+            >
               What Clients Say About Ubakco
-            </h1>
-            <p className="font-sans text-[#656565] text-[18px]/[27px] font-[400] lg:text-[28px]/[42px] w-[370px] md:w-[498px] lg:w-[516px]">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 40 }}
+              animate={controls}
+              className="font-sans text-[#656565] text-[18px]/[27px] font-[400] lg:text-[28px]/[42px] w-[370px] md:w-[498px] lg:w-[516px]"
+            >
               Feedback from businesses and individuals who rely on Ubacko for
               fat, secure, and professional delivery.
-            </p>
+            </motion.p>
           </div>
           <div className="overflow-hidden absolute w-[600px] h-full bg-[#EFEFEF] top-0 right-[-64px] hidden lg:block">
             <Image

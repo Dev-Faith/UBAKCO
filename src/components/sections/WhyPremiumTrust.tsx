@@ -115,7 +115,7 @@ const WhyPremiumTrust = () => {
   }, []);
 
   return (
-    <section className="pt-[120px] bg-white px-[16px] lg:px-[60px] pb-[320px]">
+    <section className="pt-[120px] bg-white px-[16px] lg:px-[60px] pb-[420px]">
       <h1 className="font-display text-[32px]/[48px] lg:text-[42px]/[54.6px] md:text-[42px]/[54.6px] md:w-[500px] tracking-[-0.02em] font-bold w-[370px] lg:w-[717px]">
         Why Premium Clients Trust Ubakco?
       </h1>
@@ -147,13 +147,8 @@ const WhyPremiumTrust = () => {
         >
           {/* Dynamically render enough images for seamless loop */}
           {(() => {
-            const el = typeof window !== 'undefined' && carouselRef.current;
-            const itemWidth = 550;
-            const gap = 12;
-            const visibleWidth = el && el.parentElement ? el.parentElement.offsetWidth : 0;
-            const minImages = Math.ceil(visibleWidth / (itemWidth + gap)) + 2;
-            const repeats = Math.ceil(minImages / imageCarousel.length);
-            const fullArray = Array(repeats).fill(imageCarousel).flat();
+            // Always render at least 2x the imageCarousel for seamless loop
+            const fullArray = Array(2).fill(imageCarousel).flat();
             return fullArray.map((item, idx) => (
               <Image
                 key={idx}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SiSpotify } from "react-icons/si";
 import { FaFacebook, FaApple } from "react-icons/fa";
 import React, { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { gsap } from "gsap";
 
 const Trusted = () => {
@@ -89,16 +90,34 @@ const Trusted = () => {
     { Component: SiSpotify, key: "spotify-5" },
   ];
 
+  const ref = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } });
+    }
+  }, [inView, controls]);
+
   return (
     <section className="2xl:w-screen flex justify-center bg-white">
       <div className=" mt-[130px]  w-full 2xl:w-[1440px] relative pb-[150px] ">
-        <div className="flex flex-col gap-[24px] lg:gap-[32px] px-[16px] md:px-[60px] lg:px-[60px] 2xl:px-[120px]">
-          <h1 className="font-display lg:text-[60px]/[72px] text-[32px]/[48px] md:text-[42px]/[54.6px] tracking-[-0.02em] font-semibold lg:font-bold w-[370px] lg:w-[550px] md:w-[364px]">
+        <div ref={ref} className="flex flex-col gap-[24px] lg:gap-[32px] px-[16px] md:px-[60px] lg:px-[60px] 2xl:px-[120px]">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={controls}
+            className="font-display lg:text-[60px]/[72px] text-[32px]/[48px] md:text-[42px]/[54.6px] tracking-[-0.02em] font-semibold lg:font-bold w-[370px] lg:w-[550px] md:w-[364px]"
+          >
             Trusted by Industry Leaders
-          </h1>
-          <p className="text-[18px]/[27px] lg:text-[28px]/[42px]  font-sans font-regular w-[370px] lg:w-[623px] md:w-[623px]">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={controls}
+            className="text-[18px]/[27px] lg:text-[28px]/[42px]  font-sans font-regular w-[370px] lg:w-[623px] md:w-[623px]"
+          >
             Ubakco offers tailored logisitics built  on trust and performance. Every delivery, big or small is managed with the precision our clients expect.
-          </p>
+          </motion.p>
         </div>
         <div className="flex justify-between items-center w-full p-0 mt-[94px] overflow-hidden">
           <Image

@@ -1,3 +1,6 @@
+"use client"
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import FeatureCard from "../ui/cards/FeatureCard";
 
@@ -36,18 +39,36 @@ export default function Features() {
       separator: false,
     },
   ];
+  const ref = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } });
+    }
+  }, [inView, controls]);
+
   return (
     <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px]  lg:pb-[113px] rounded-tr-[50px] overflow-hidden">
       <div className="relative  lg:pt-[150px] pt-[70px] px-[16px] md:px-[60px] lg:pl-[60px] 2xl:pl-[120px] flex items-start justify-between overflow-hidden">
-        <div className="left flex flex-col lg:gap-[64px] gap-[24px]">
-          <h1 className=" text-[32px]/[48px] lg:text-[75px]/[94px] md:text-[32px]/[41.6px] md:w-[714px] font-bold tracking-[-0.02em] w-[370px] lg:w-[918px] font-display text-[#000000] z-9 ">
+        <div ref={ref} className="left flex flex-col lg:gap-[64px] gap-[24px]">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={controls}
+            className=" text-[32px]/[48px] lg:text-[75px]/[94px] md:text-[32px]/[41.6px] md:w-[714px] font-bold tracking-[-0.02em] w-[370px] lg:w-[918px] font-display text-[#000000] z-9 "
+          >
             Complete Logistics Solutions
-          </h1>
-          <p className="font-sans text-[#656565] lg:text-[28px]/[42px] md:text-[16px]/[24px] text-[18px]/[27px] md:w-[600px] lg:w-[516px]">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={controls}
+            className="font-sans text-[#656565] lg:text-[28px]/[42px] md:text-[16px]/[24px] text-[18px]/[27px] md:w-[600px] lg:w-[516px]"
+          >
             Ubakco offers tailored logistics built on trust and performance.
             Every delivery, big or small is managed with the precision our
             clients expect.
-          </p>
+          </motion.p>
         </div>
         <div className="overflow-hidden absolute w-[600px] h-full bg-[#EFEFEF] top-0 right-[-64px] hidden lg:block">
           <Image

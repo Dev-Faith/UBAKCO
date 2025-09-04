@@ -1,4 +1,7 @@
-import React from "react";
+
+"use client";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useRef, useEffect } from "react";
 import { Button } from "../ui/buttons/Button";
 import MissionCard from "../ui/cards/MissionCard";
 import MissionLabel from "../ui/cards/MissionLabel";
@@ -39,18 +42,36 @@ const Mission = () => {
     },
   ];
 
+  const ref = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } });
+    }
+  }, [inView, controls]);
+
   return (
     <section className="sticky relative top-[-240px] lg:top-0 -z-9 .mission min-h-[calc(100vh+10%)] 2xl:h-[1029px] lg:h-screen pt-[120px] lg:pt-[120px] bg-white rounded-tl-[50px] rounded-tr-[50px] lg:pl-[60px] px-[16px] md:px-[60px] 2xl:pl-[120px] flex lg:items-center lg:justify-center xl:w-screen">
       <div className="flex flex-col lg:flex-row h-full  items-start justify-between w-full xl:w-[1440px] relative ">
-        <div className="mission-left flex flex-col gap-[32px] lg:gap-[64px] w-[700px] md:w-[617px]">
-          <h1 className="lg:text-[42px]/[54.6px] text-[32px]/[48px] md:text-[42px]/[54.6px] tracking-[0.02em] font-semibold lg:font-bold font-display w-[370px] md:w-[617px] lg:w-[617px] tracking-[-0.02em]">
+        <div ref={ref} className="mission-left flex flex-col gap-[32px] lg:gap-[64px] w-[700px] md:w-[617px]">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={controls}
+            className="lg:text-[42px]/[54.6px] text-[32px]/[48px] md:text-[42px]/[54.6px] tracking-[0.02em] font-semibold lg:font-bold font-display w-[370px] md:w-[617px] lg:w-[617px] tracking-[-0.02em]"
+          >
             Logistics that Move Business Forward
-          </h1>
-          <p className=" w-[370px] lg:w-[516px] text-[#656565] md:w-[617px] md:text-[28px]/[42px] font-sans text-[28px]/[42px] text-[16px]/[27px] font-regular tracking-[-0.02em]">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={controls}
+            className=" w-[370px] lg:w-[516px] text-[#656565] md:w-[617px] md:text-[28px]/[42px] font-sans text-[28px]/[42px] text-[16px]/[27px] font-regular tracking-[-0.02em]"
+          >
             From airport-to-airport shipments to executive white-glove
             logistics, Ubakco provides secure, efficient, and time-critical
             delivery solutions across Nigeria and beyond.
-          </p>
+          </motion.p>
           <Button className="w-[209px] h-[55px] flex items-center gap-[12px]">
             Our Mission{" "}
             <Image

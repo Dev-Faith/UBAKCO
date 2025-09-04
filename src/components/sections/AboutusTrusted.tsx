@@ -1,5 +1,7 @@
-"use client"
+
+"use client";
 import Image from "next/image";
+import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useRef, useEffect } from "react";
 
 const AboutusTrusted = () => {
@@ -71,15 +73,33 @@ const AboutusTrusted = () => {
     `}</style>
   );
 
+  const ref = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } });
+    }
+  }, [inView, controls]);
+
   return (
     <section className="pt-[120px] px-[16px] md:px-[60px] lg:pl-[60px]">
-      <div>
-        <h1 className=" text-[32px]/[48px] lg:text-[42px]/[54.6px] md:text-[42px]/[54.6px] font-semibold lg:font-bold tracking-[-0.02em] md:w-[358px] font-display w-[268px] lg:w-[358px]">
+      <div ref={ref}>
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={controls}
+          className=" text-[32px]/[48px] lg:text-[42px]/[54.6px] md:text-[42px]/[54.6px] font-semibold lg:font-bold tracking-[-0.02em] md:w-[358px] font-display w-[268px] lg:w-[358px]"
+        >
           Trusted by Industry Leaders
-        </h1>
-        <p className=" text-[18px]/[27px] lg:text-[28px]/[42px] md:text-[28px]/[42px] md:w-[500px] font-[400] font-sans tracking-[0.05em] text-[#656565] w-[370px] lg:w-[628px] mt-[24px] lg:mt-[32px]">
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          animate={controls}
+          className=" text-[18px]/[27px] lg:text-[28px]/[42px] md:text-[28px]/[42px] md:w-[500px] font-[400] font-sans tracking-[0.05em] text-[#656565] w-[370px] lg:w-[628px] mt-[24px] lg:mt-[32px]"
+        >
           Proud to serve Nigeria's most prestigious companies and organizations
-        </p>
+        </motion.p>
       </div>
       <div
         ref={carouselRef}
