@@ -84,8 +84,9 @@ const AboutusTrusted = () => {
   }, [inView, controls]);
 
   return (
-    <section className="pt-[120px] px-[16px] md:px-[60px] lg:pl-[60px]">
-      <div ref={ref}>
+      <div className="w-full bg-white flex justify-center">
+        <section className="max-w-[1440px] w-full pt-[120px] px-[16px] md:px-[60px] lg:pl-[60px]">
+        <div ref={ref}>
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={controls}
@@ -134,7 +135,8 @@ const AboutusTrusted = () => {
         ))}
       </div>
       {hideScrollbar}
-    </section>
+      </section>
+    </div>
   );
 };
 

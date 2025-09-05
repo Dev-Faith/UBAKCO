@@ -1,11 +1,9 @@
-
 "use client";
-import Image from 'next/image'
-import React, { useRef, useEffect } from 'react'
-import { Button } from '../ui/buttons/Button'
+import Image from "next/image";
+import React, { useRef, useEffect } from "react";
+import { Button } from "../ui/buttons/Button";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion, useAnimation, useInView } from "framer-motion";
-
 
 const FeaturesHero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -14,37 +12,62 @@ const FeaturesHero = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start({ opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } });
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.7, ease: "easeOut" },
+      });
     }
   }, [inView, controls]);
 
   return (
-    <section className="lg:mt-[88px] relative lg-h-full h-[50vh] lg:mb-[325px] mb-[509px]">
-      <div className="relative">
-        <Image src="/images/features.png" alt="features-background" width={1440} height={682} className="h-[calc(100vh-88px)] object-cover " />
-        <Image src="/images/featShadow.png" alt="features-shadow" width={865} height={685} className='absolute lg:top-0 top-[10%] md:w-[100vw] w-[500px] h-[100vh]'/>
-        <div className="absolute top-[30%] lg:top-[20%] left-[16px] lg:left-[60px] md:left-[60px] flex flex-col gap-[40px]">
-          <div ref={ref} className=" flex flex-col gap-[24px]">
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={controls}
-              className="font-bold text-[24px]/[36px]  lg:text-[48px]/[62.4px] md:w-[400px] md:text-[40px]/[50px]  tracking-[-0.02em] font-display w-[221px] lg:w-[748px] text-white"
+    <div className="w-full bg-white flex justify-center z-[-10] max-h-[500px] md:max-h-[700px] overflow-hidden ">
+      <section className=" w-full lg:mt-[88px] relative lg-h-full h-[20%] flex justify-center">
+        <div className="relative flex justify-center">
+          <Image
+            src="/images/features.png"
+            alt="features-background"
+            width={1440}
+            height={682}
+            className="h-[calc(100vh-88px)] object-cover w-screen"
+          />
+          <Image
+            src="/images/featShadow.png"
+            alt="features-shadow"
+            width={865}
+            height={685}
+            className="absolute lg:top-0 top-[10%] md:w-[100vw] w-[500px] h-[100vh]"
+          />
+          <div className=" absolute w-full  max-w-[1440px] px-[16px] lg:px-[60px] md:px-[60px] lg:top-[20%] top-[20%] md:top-[30%] flex flex-col gap-[40px]">
+            <div
+              ref={ref}
+              className=" flex flex-col gap-[24px] w-full "
             >
-              Premium & White-Glove Logistics
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 40 }}
-              animate={controls}
-              className="font-sans text-white text-[14px]/[21px] lg:text-[18px]/[27px] md:text-[18px]/[27px] w-[516px]  font-[400] w-full lg:w-[516px]"
-            >
-              For luxury, executive, and high-value deliveries that demand absolute care, privacy and precision.
-            </motion.p>
+              <motion.h1
+                initial={{ opacity: 0, y: 40 }}
+                animate={controls}
+                className="font-bold text-[24px]/[36px]  lg:text-[48px]/[62.4px] md:w-[400px] md:text-[40px]/[50px]  tracking-[-0.02em] font-display w-[250px] lg:w-[748px] text-white"
+              >
+                Premium & White-Glove Logistics
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 40 }}
+                animate={controls}
+                className="font-sans text-white text-[14px]/[21px] lg:text-[18px]/[27px] md:text-[18px]/[27px] w-[400px]  font-[400] lg:w-[516px]"
+              >
+                For luxury, executive, and high-value deliveries that demand
+                absolute care, privacy and precision.
+              </motion.p>
+            </div>
+            <Button className="w-[209px] text-white flex items-center gap-[12px]">
+              Contact Us
+              <FaArrowRight />{" "}
+            </Button>
           </div>
-          <Button className="w-[209px] text-white flex items-center gap-[12px]">Contact Us<FaArrowRight/> </Button>
         </div>
-      </div>
-    </section>
-  )
-}
+      </section>
+    </div>
+  );
+};
 
-export default FeaturesHero
+export default FeaturesHero;

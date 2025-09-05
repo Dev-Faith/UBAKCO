@@ -15,8 +15,9 @@ const CompanyBg = () => {
   }, [inView, controls]);
 
   return (
-    <section className="bg-[#EFEFEF] pt-[100px] pb-[100px] px-[16px] lg:px-[60px] md:px-[60px] flex flex-col  lg:flex-row gap-[100px] lg:justify-between">
-      <div ref={ref} className="flex flex-col gap-[32px] w-[370px] md:w-full lg:w-[600px]">
+    <div className="w-full bg-[#EFEFEF] flex justify-center">
+      <section className="max-w-[1440px] w-full pt-[100px] pb-[100px] px-[16px] lg:px-[60px] md:px-[60px] flex flex-col  lg:flex-row gap-[100px] lg:justify-between">
+        <div ref={ref} className="flex flex-col gap-[32px] w-[370px] md:w-full lg:w-[600px]">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={controls}
@@ -45,10 +46,11 @@ const CompanyBg = () => {
           </motion.p>
         </div>
       </div>
-      <div className="bg-[#D9D9D9] h-[772px] w-[370px] lg:w-[550px] rounded-[40px] md:w-full md:rounded-[40px]">
+        <div className="bg-[#D9D9D9] h-[772px] w-[370px] lg:w-[550px] rounded-[40px] md:w-full md:rounded-[40px]">
 
-      </div>
-    </section>
+        </div>
+      </section>
+    </div>
   );
 };
 

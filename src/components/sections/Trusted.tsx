@@ -101,8 +101,8 @@ const Trusted = () => {
   }, [inView, controls]);
 
   return (
-    <section className="2xl:w-screen flex justify-center bg-white">
-      <div className=" mt-[130px]  w-full 2xl:w-[1440px] relative pb-[150px] ">
+    <section className="w-full flex justify-center bg-white">
+      <div className="mt-[130px] w-full max-w-[1440px] mx-auto relative pb-[150px] ">
         <div ref={ref} className="flex flex-col gap-[24px] lg:gap-[32px] px-[16px] md:px-[60px] lg:px-[60px] 2xl:px-[120px]">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}

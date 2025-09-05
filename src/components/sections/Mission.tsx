@@ -53,8 +53,8 @@ const Mission = () => {
   }, [inView, controls]);
 
   return (
-    <section className="sticky relative top-[-240px] lg:top-0 -z-9 .mission min-h-[calc(100vh+10%)] 2xl:h-[1029px] lg:h-screen pt-[120px] lg:pt-[120px] bg-white rounded-tl-[50px] rounded-tr-[50px] lg:pl-[60px] px-[16px] md:px-[60px] 2xl:pl-[120px] flex lg:items-center lg:justify-center xl:w-screen">
-      <div className="flex flex-col lg:flex-row h-full  items-start justify-between w-full xl:w-[1440px] relative ">
+    <section className="sticky relative top-[-240px] lg:top-0 -z-9 .mission min-h-[calc(100vh+10%)] 2xl:h-[1029px] lg:h-screen pt-[120px] lg:pt-[120px] bg-white rounded-tl-[50px] rounded-tr-[50px] lg:pl-[60px] px-[16px] md:px-[60px] 2xl:pl-[120px] flex lg:items-center lg:justify-center w-full">
+      <div className="flex flex-col lg:flex-row h-full  items-start justify-between w-full max-w-[1440px] mx-auto relative ">
         <div ref={ref} className="mission-left flex flex-col gap-[32px] lg:gap-[64px] w-[700px] md:w-[617px]">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}

@@ -11,9 +11,10 @@ const CertAndComp = () => {
     "NDLEA-complaint for sensitive and regulated goods handling",
   ];
   return (
-    <section className="bg-[#EFEFEF] pt-[70px] lg:pt-[150px] px-[16px] lg:px-[60px] md:px-[60px] pb-[358px] relative">
+    <div className="w-full bg-[#EFEFEF] flex justify-center">
+      <section className="max-w-[1440px] w-full pt-[70px] lg:pt-[150px] px-[16px] lg:px-[60px] md:px-[60px] pb-[358px] relative">
         <Image src="/images/Logomark.png" alt="Logomark" width={100} height={100}  className="absolute hidden md:w-[312px] md:h-[296px] md:block lg:block top-0 right-0 soft-light-effect w-[567px] h-[537.62px]"/>
-      <h2 className=" text-[32px]/[48px] lg:text-[42px]/[54.6px] md:text-[42px]/[54.6px]  font-bold font-display tracking-[-0.02em] w-[368px] lg:w-[400px]">
+        <h2 className=" text-[32px]/[48px] lg:text-[42px]/[54.6px] md:text-[42px]/[54.6px]  font-bold font-display tracking-[-0.02em] w-[368px] lg:w-[400px]">
         Certifications & Compliance
       </h2>
       <div className="py-[98px] grid lg:grid-cols-3 grid-cols-1 border-y-[1px] md:w-full border-[#CACACA] mt-[98px] gap-y-[80px] lg:gap-x-[30px] relative">
@@ -30,7 +31,8 @@ const CertAndComp = () => {
         ))}
         <div className="w-full h-[1px] bg-[#CACACA] top-[50%] lg:block hidden absolute"></div>
       </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

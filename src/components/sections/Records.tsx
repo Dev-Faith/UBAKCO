@@ -35,8 +35,8 @@ const Records = () => {
   }, [inView, controls]);
 
   return (
-    <section className="2xl:w-screen 2xl:flex justify-center bg-white">
-      <div className="lg:pt-[150px] pt-[47px] px-[16px] md:px-[60px] lg:px-[60px] 2xl:px-[120px] 2xl:w-[1440px] ">
+    <section className="w-full bg-white">
+      <div className="lg:pt-[150px] pt-[47px] px-[16px] md:px-[60px] lg:px-[60px] 2xl:px-[120px] w-full max-w-[1440px] mx-auto ">
         <motion.h1
           ref={ref}
           initial={{ opacity: 0, y: 40 }}

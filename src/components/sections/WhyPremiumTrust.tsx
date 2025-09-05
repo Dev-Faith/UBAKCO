@@ -85,12 +85,12 @@ const WhyPremiumTrust = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!carouselRef.current) return;
+    if (typeof window === 'undefined' || !carouselRef.current) return;
     const el = carouselRef.current;
     const itemWidth = 550;
     const gap = 12;
     // Calculate how many images are needed to fill and overflow the viewport
-    const visibleWidth = el.parentElement ? el.parentElement.offsetWidth : 0;
+    const visibleWidth = el.parentElement ? el.parentElement.offsetWidth : window.innerWidth;
     const minImages = Math.ceil(visibleWidth / (itemWidth + gap)) + 2; // +2 for overflow buffer
     // Duplicate the array enough times
     const repeats = Math.ceil(minImages / imageCarousel.length);
@@ -115,8 +115,9 @@ const WhyPremiumTrust = () => {
   }, []);
 
   return (
-    <section className="pt-[120px] bg-white px-[16px] lg:px-[60px] pb-[420px]">
-      <h1 className="font-display text-[32px]/[48px] lg:text-[42px]/[54.6px] md:text-[42px]/[54.6px] md:w-[500px] tracking-[-0.02em] font-bold w-[370px] lg:w-[717px]">
+    <div className="w-full bg-white flex justify-center">
+      <section className="max-w-[1440px] w-full pt-[120px] px-[16px] lg:px-[60px] pb-[420px]">
+        <h1 className="font-display text-[32px]/[48px] lg:text-[42px]/[54.6px] md:text-[42px]/[54.6px] md:w-[500px] tracking-[-0.02em] font-bold w-[370px] lg:w-[717px]">
         Why Premium Clients Trust Ubakco?
       </h1>
       <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-[120px] gap-y-[24px] mt-[70px] relative h-[320px]">
@@ -138,11 +139,11 @@ const WhyPremiumTrust = () => {
         ))}
         <div className="absolute top-[50%] h-[1px] w-full bg-[#CACACA] hidden lg:block"></div>
       </div>
-      {/* Carousel with fading shadows */}
-      <div className="carousel w-full overflow-x-hidden mt-[120px] md:mt-[250px] relative" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+  {/* Carousel with fading shadows */}
+  <div className="carousel w-full overflow-x-hidden mt-[120px] md:mt-[250px] relative " style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
         <div
           ref={carouselRef}
-          className="flex gap-[12px]"
+          className="flex gap-[12px] hide-scrollbar"
           style={{ overflowY: "hidden" }}
         >
           {/* Dynamically render enough images for seamless loop */}
@@ -166,7 +167,8 @@ const WhyPremiumTrust = () => {
           .carousel::-webkit-scrollbar { display: none; }
         `}</style>
       </div>
-    </section>
+      </section>
+    </div>
   );
 }
 

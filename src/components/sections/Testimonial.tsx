@@ -164,7 +164,7 @@ const Testimonial = () => {
   }, [inView, controls]);
 
   return (
-    <div className="flex justify-center 2xl:w-screen bg-[#EFEFEF] pb-[500px] lg:pb-[500px] md:h-[1417.84px]">
+  <div className="flex justify-center 2xl:w-screen bg-[#EFEFEF] pb-[620px] md:pb-[160px] lg:pb-[500px] md:h-auto">
       <section
         ref={sectionRef}
         className="2xl:w-[1440px]"
@@ -197,7 +197,7 @@ const Testimonial = () => {
             />
           </div>
         </div>
-        <div className="w-screen mt-[100px] relative h-[934px]  md:px-[60px]">
+  <div className="w-screen mt-[100px] relative h-[800px] md:px-[60px]">
           <Image
             src="/images/testShadowLeft.png"
             alt="Shadow Left"
@@ -222,7 +222,7 @@ const Testimonial = () => {
             </div>
             <div>
               <div
-                className="invisible lg:visible flex flex-row items-center gap-[50px] left-0 absolute left-[-50%] 2xl:left-[-30%]"
+                className="invisible lg:visible flex flex-row items-center gap-[32px] left-0 absolute left-[-50%] 2xl:left-[-30%]"
                 ref={testimonialRef1}
               >
                 {testimonialList1.map((testimonial, index) => (
@@ -237,7 +237,7 @@ const Testimonial = () => {
                 ))}
               </div>
               <div
-                className="invisible lg:visible flex flex-row items-center gap-[50px] mt-[16px] right-0 absolute right-[-50%] 2xl:right-[10%] bottom-0"
+                className="invisible lg:visible flex flex-row items-center gap-[32px] right-0 absolute right-[-50%] 2xl:right-[10%] top-[60%]"
                 ref={testimonialRef2}
               >
                 {testimonialList2.map((testimonial, index) => (

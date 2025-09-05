@@ -50,8 +50,8 @@ export default function Features() {
   }, [inView, controls]);
 
   return (
-    <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px]  lg:pb-[113px] rounded-tr-[50px] overflow-hidden">
-      <div className="relative  lg:pt-[150px] pt-[70px] px-[16px] md:px-[60px] lg:pl-[60px] 2xl:pl-[120px] flex items-start justify-between overflow-hidden">
+    <section className="bg-[#EFEFEF] w-full rounded-tl-[50px] lg:pb-[113px] rounded-tr-[50px] overflow-hidden">
+      <div className="relative lg:pt-[150px] pt-[70px] px-[16px] md:px-[60px] lg:pl-[60px] 2xl:pl-[120px] flex items-start justify-between overflow-hidden w-full max-w-[1440px] mx-auto">
         <div ref={ref} className="left flex flex-col lg:gap-[64px] gap-[24px]">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}

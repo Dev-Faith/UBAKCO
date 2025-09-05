@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${montserrat.variable} hide-scrollbar scroll-smooth xl:w-[1440px] xl:flex xl:flex-col xl:justify-center`}>
+    <html lang="en" className={`${poppins.variable} ${montserrat.variable} hide-scrollbar scroll-smooth max-[1440px] xl:flex xl:flex-col xl:justify-center`}>
       <body
   className={`antialiased` }
       >

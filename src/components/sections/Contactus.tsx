@@ -17,7 +17,7 @@ const Contactus = () => {
   }, [inView, controls]);
 
   return (
-    <section className="lg:mt-[95px] relative overflow-hidden h-[50vh] lg:h-full">
+    <section className="lg:mt-[95px] relative overflow-hidden h-[50vh] lg:h-full z-[9]">
       <Image
         src="/images/contactusLeftShadow.png"
         alt="Contact Us Left Shadow"
@@ -30,7 +30,7 @@ const Contactus = () => {
         alt="Contact Us"
         width={1440}
         height={515}
-        className="h-[50vh] lg:h-full object-cover"
+        className="h-[50vh] lg:h-full object-cover w-screen"
       />
       <Image
         src="/images/contactusRightShadow.png"

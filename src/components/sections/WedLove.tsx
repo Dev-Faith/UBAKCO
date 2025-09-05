@@ -18,9 +18,10 @@ const WedLove = () => {
     },
   ];
   return (
-    <section className="bg-[#EDEDED] pt-[70px] lg:pt-[150px] px-[16px] md:px-[60px] lg:px-[60px] rounded-t-[20px] relative mt-[-24px] pb-[116px] overflow-hidden">
-      <Image src="/images/logoMark.png" width={567} height={567} alt="Logo Mark" className="absolute lg:top-[-240px] right-0 soft-light-effect w-[198px] lg:w-[567px] h-[274px] lg:h-[567px] top-0" />
-      <div className="flex flex-col gap-[32px]">
+    <div className="w-full bg-[#EDEDED] flex justify-center">
+      <section className="max-w-[1440px] w-full pt-[70px] lg:pt-[150px] px-[16px] md:px-[60px] lg:px-[60px] rounded-t-[20px] relative mt-[-24px] pb-[116px] overflow-hidden">
+        <Image src="/images/logoMark.png" width={567} height={567} alt="Logo Mark" className="absolute lg:top-[-240px] right-0 soft-light-effect w-[198px] lg:w-[567px] h-[274px] lg:h-[567px] top-0" />
+        <div className="flex flex-col gap-[32px]">
         <h1 className=" text-[32px]/[48px] md:w-[500px] md:text-[42px]/[54.6px] lg:text-[42px]/[54.6px] tracking-[-0.02em] w-[249px] lg:w-[447px] font-bold font-display">
           We’d love to hear from you
         </h1>
@@ -60,7 +61,8 @@ const WedLove = () => {
           </div>
         ))}
       </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

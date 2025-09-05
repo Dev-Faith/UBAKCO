@@ -9,7 +9,7 @@ export default function ContactPage() {
     <Contactus />
     <WedLove />
     <Map />
-    <RequestQuote formOffset={false} bg="[#EDEDED]" className="pb-[514px]" />
+    <RequestQuote formOffset={false} bg="[#EDEDED]" className="pb-[514px] pt-[220px]" />
     <Footer/>
   </main>;
 }

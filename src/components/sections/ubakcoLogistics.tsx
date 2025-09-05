@@ -17,8 +17,9 @@ const UbakcoLogistics = () => {
   }, [inView, controls]);
 
   return (
-    <section className="bg-[#EFEFEF] px-[16px] md:px-[60px] lg:px-[60px] py-[120px]">
-      <div className="flex items-center md:items-start lg:justify-between 2xl:w-[1440px] mx-auto gap-[100px] flex-col lg:flex-row">
+    <div className="w-full bg-[#EFEFEF] flex justify-center">
+      <section className="max-w-[1440px] w-full px-[16px] md:px-[60px] lg:px-[60px] py-[120px]">
+        <div className="flex items-center md:items-start lg:justify-between gap-[100px] flex-col lg:flex-row">
         <div ref={ref} className="flex flex-col gap-[24px] md:gap-[64px] lg:gap-[64px] ">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -54,8 +55,9 @@ const UbakcoLogistics = () => {
             className="w-[621px] h-[676px] object-cover md:w-[714px]"
           />
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </div>
   );
 };
 

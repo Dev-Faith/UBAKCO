@@ -26,8 +26,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#000000] w-screen flex flex-col lg:flex-row justify-center">
-      <div className="bg-[#000000] px-[16px] md:px-[60px] lg:px-[60px] pt-[100px] flex flex-col gap-[100px]">
+    <footer className="w-full bg-[#000000] flex justify-center">
+      <div className="max-w-[1440px] w-full bg-[#000000] px-[16px] md:px-[60px] lg:px-[60px] pt-[100px] flex flex-col gap-[100px]">
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="flex flex-col gap-[32px]">
             <Image

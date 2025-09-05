@@ -15,7 +15,7 @@ export default function HomePage() {
     <Records />
     <Trusted />
     <Testimonial />
-    <CTA className="py-[120px] lg:py-0 bg-white lg:mt-[500px]" offset="lg:top-[calc(297px-493px)]"/>
+    <CTA className="py-[120px] lg:py-0 bg-white" offset="lg:top-[calc(297px-493px)]"/>
     <Footer />
   </main>;
 }

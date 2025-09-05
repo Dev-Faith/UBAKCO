@@ -53,8 +53,9 @@ export default function Features() {
     },
   ];
   return (
-    <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px] lg:pb-[514px] rounded-tr-[50px] overflow-hidden pb-[490px] mt-[-32px] lg:mt-0">
-      <div className="relative  pt-[110px] pl-[60px] 2xl:pl-[120px]">
+    <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px] lg:pb-[514px] rounded-tr-[50px] overflow-hidden pb-[490px] mt-[-32px] lg:mt-0 flex justify-center">
+      <div className="w-full max-w-[1440px]">
+        <div className="relative  pt-[110px] pl-[60px] 2xl:pl-[120px]">
         <div className="overflow-hidden absolute w-[600px] h-[752px] bg-[#EFEFEF] top-0 right-[-64px]">
           <Image
             src="/images/Logomark.png"
@@ -91,6 +92,7 @@ export default function Features() {
           <div className="separator h-[1px] absolute w-full bg-[#CACACA] hidden lg:block top-[66%]"></div>
           <div className="separator h-[1px] absolute w-full bg-[#CACACA] hidden lg:block bottom-0"></div>
         </div>
+      </div>
       </div>
     </section>
   );

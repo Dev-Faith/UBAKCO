@@ -19,8 +19,8 @@ const RequestQuote = ({className, formOffset=true, bg="white"}:{className?:strin
   }, [inView, controls]);
 
   return (
-    <section className={`w-screen bg-${bg} flex justify-center ${className}`}>
-      <div className="">
+    <section className={`min-w-screen bg-${bg} flex justify-center ${className}`}>
+      <div className="lg:flex justify-center w-full">
         <div className={`flex flex-col items-center  relative ${formOffset ? "top-[calc(297px-650px)]" : ""} lg:rounded-[32px]`}>
           <Image
             src="/images/request.png"
