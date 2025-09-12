@@ -2,6 +2,7 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useRef, useEffect } from "react";
 import Image from "next/image";
+import Statistics from "./Statistics";
 
 const Records = () => {
   const records = [
@@ -36,16 +37,17 @@ const Records = () => {
 
   return (
     <section className="w-full bg-white">
-      <div className="lg:pt-[150px] pt-[47px] px-[16px] md:px-[60px] lg:px-[60px] 2xl:px-[120px] w-full max-w-[1440px] mx-auto ">
+      <div className="lg:pt-[150px] pt-[47px]  w-full max-w-[1440px] mx-auto ">
         <motion.h1
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
           animate={controls}
-          className=" text-[32px]/[48px] tracking-[-0.02em] lg:text-[42px]/[54.6px] font-semibold lg:font-bold font-display w-[209px] lg:w-[450px]"
+          className=" text-[32px]/[48px] tracking-[-0.02em] lg:text-[42px]/[54.6px] font-semibold lg:font-bold font-display w-[209px] lg:w-[450px] px-[16px] sm:px-[60px]"
         >
           Proven Track Records
         </motion.h1>
-        <div className="relative border-y-[1px] border-[#CACACA] py-[40px] mt-[55px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-[41px] lg:gap-0">
+        <Statistics bg="white"/>
+        {/* <div className="relative border-y-[1px] border-[#CACACA] py-[40px] mt-[55px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-[41px] lg:gap-0">
           <div className="separator w-[1px] left-[calc(100%/3)] absolute h-[70%] bg-[#CACACA] hidden lg:block"></div>
           <div className="separator w-[1px] right-[30%] absolute h-[70%] bg-[#CACACA] hidden lg:block"></div>
           {records.map((record, index) => (
@@ -88,7 +90,7 @@ const Records = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

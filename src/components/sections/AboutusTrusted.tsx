@@ -39,39 +39,6 @@ const AboutusTrusted = () => {
   ];
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    if (!carousel) return;
-
-    const onWheel = (e: WheelEvent) => {
-      // Only handle vertical scroll
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        const atStart = carousel.scrollLeft === 0;
-        const atEnd = Math.ceil(carousel.scrollLeft + carousel.offsetWidth) >= carousel.scrollWidth;
-        if ((e.deltaY < 0 && atStart) || (e.deltaY > 0 && atEnd)) {
-          // Allow normal scroll if at the start/end
-          return;
-        }
-        e.preventDefault();
-        carousel.scrollLeft += e.deltaY;
-      }
-    };
-    carousel.addEventListener('wheel', onWheel, { passive: false });
-    return () => carousel.removeEventListener('wheel', onWheel);
-  }, []);
-
-  // Hide scrollbar with CSS
-  const carouselStyle = {
-    scrollbarWidth: 'none',
-    msOverflowStyle: 'none',
-  } as React.CSSProperties;
-
-  // Hide scrollbar for webkit browsers
-  const hideScrollbar = (
-    <style>{`
-      .about-carousel::-webkit-scrollbar { display: none; }
-    `}</style>
-  );
 
   const ref = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
@@ -85,42 +52,41 @@ const AboutusTrusted = () => {
 
   return (
       <div className="w-full bg-white flex justify-center">
-        <section className="max-w-[1440px] w-full pt-[120px] px-[16px] md:px-[60px] lg:pl-[60px]">
+        <section className="max-w-[1440px] w-full pt-[120px] px-[16px] sm:px-[60px] lg:pl-[60px]">
         <div ref={ref}>
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={controls}
-          className=" text-[32px]/[48px] lg:text-[42px]/[54.6px] md:text-[42px]/[54.6px] font-semibold lg:font-bold tracking-[-0.02em] md:w-[358px] font-display w-[268px] lg:w-[358px]"
+          className=" text-[32px]/[48px] lg:text-[42px]/[54.6px] sm:text-[42px]/[54.6px] font-semibold lg:font-bold tracking-[-0.02em] sm:w-[358px] font-display w-[268px] lg:w-[358px]"
         >
           Trusted by Industry Leaders
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           animate={controls}
-          className=" text-[18px]/[27px] lg:text-[28px]/[42px] md:text-[28px]/[42px] md:w-[500px] font-[400] font-sans tracking-[0.05em] text-[#656565] w-[370px] lg:w-[628px] mt-[24px] lg:mt-[32px]"
+          className=" text-[18px]/[27px] lg:text-[28px]/[42px] sm:text-[28px]/[42px] sm:w-[500px] font-[400] font-sans tracking-[0.05em] text-[#656565] w-[370px] lg:w-[628px] mt-[24px] lg:mt-[32px]"
         >
           Proud to serve Nigeria's most prestigious companies and organizations
         </motion.p>
       </div>
       <div
         ref={carouselRef}
-        className="about-carousel mt-[70px] flex flex-col lg:flex-row items-center gap-[32px] pb-[138px] lg:overflow-x-auto overflow-y-hidden lg:pr-[40px]"
-        style={carouselStyle}
+        className="about-carousel mt-[70px] flex flex-col lg:flex-row items-center gap-[32px] pb-[138px] lg:overflow-x-auto overflow-y-hidden lg:pr-[40px] hide-scrollbar"
       >
         {carouselItems.map((items, index) => (
           <div
             key={index}
-            className="relative px-[20px] lg:px-[40px]  py-[60px] text-white min-h-[490px] w-full md:h-[812px] lg:min-w-[596px] lg:min-h-[812px] flex flex-col justify-between"
+            className="relative px-[20px] lg:px-[40px]  py-[60px] text-white min-h-[490px] w-full sm:h-[812px] lg:min-w-[596px] lg:min-h-[812px] flex flex-col justify-between"
           >
             <Image
               src={items.image}
               alt={items.title}
               width={500}
               height={300}
-              className="rounded-[40px] top-0 left-0 w-full h-full object-cover absolute z-[-1] w-[350px] lg:w-[596px] h-[490px] lg:h-[812px]"
+              className="rounded-[40px] top-0 left-0 w-full h-full object-cover absolute w-[350px] lg:w-[596px] h-[490px] sm:h-[812px]"
             />
-            <div className="flex items-center justify-between ">
-              <p className=" text-[24px]/36px] lg:text-[40px]/[42px] md:text-[40px]/[42px] md:w-full w-[190px] lg:w-full tracking-[0.05em] font-semibold font-display line-clamp-2">
+            <div className="flex items-center justify-between z-[1]">
+              <p className=" text-[24px]/36px] sm:text-[40px]/[42px] sm:w-full w-[190px] lg:w-full tracking-[0.05em] font-semibold font-display line-clamp-2">
                 {items.title}
               </p>{" "}
               <Image
@@ -130,11 +96,10 @@ const AboutusTrusted = () => {
                 height={80}
               />
             </div>
-            <p className="text-[16px]/[24px] lg:text-[28px]/[42px] w-[330px] lg:w-[516px] md:text-[28px]/[42px] md:w-full">{items.desc}</p>
+            <p className="text-[16px]/[24px] lg:text-[28px]/[42px] w-full sm:text-[28px]/[42px] sm:w-full z-[1]  line-clamp-3">{items.desc}</p>
           </div>
         ))}
       </div>
-      {hideScrollbar}
       </section>
     </div>
   );

@@ -11,20 +11,21 @@ const Trusted = () => {
 
   useEffect(() => {
     if (iconsContainerRef.current) {
-      // Create GSAP timeline with yoyo animation
-      const tl = gsap.timeline({ repeat: -1, yoyo: true });
-
-      tl.to(iconsContainerRef.current, {
-        x: -300,
-        duration: 2,
-        ease: "power2.inOut",
-      }).to(iconsContainerRef.current, {
-        x: 300,
-        duration: 2,
-        ease: "power2.inOut",
+      const container = iconsContainerRef.current;
+      gsap.set(container, { x: 0 });
+      // Get width of one icon set (half the children)
+      const iconSetWidth = container.scrollWidth / 2;
+      // Animate from 0 to -iconSetWidth (left, so icons move right)
+      gsap.to(container, {
+        x: -iconSetWidth,
+        duration: 10,
+        ease: "linear",
+        repeat: -1,
+        onRepeat: () => {
+          gsap.set(container, { x: 0 });
+        }
       });
     }
-
     return () => {
       gsap.killTweensOf(iconsContainerRef.current);
     };
@@ -102,21 +103,21 @@ const Trusted = () => {
 
   return (
     <section className="w-full flex justify-center bg-white">
-      <div className="mt-[130px] w-full max-w-[1440px] mx-auto relative pb-[150px] ">
-        <div ref={ref} className="flex flex-col gap-[24px] lg:gap-[32px] px-[16px] md:px-[60px] lg:px-[60px] 2xl:px-[120px]">
+      <div className="mt-[130px] w-full max-w-[1440px] mx-auto relative pb-[150px] px-[16px] sm:px-[60px] ">
+        <div ref={ref} className="flex flex-col gap-[24px] lg:gap-[32px]">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={controls}
-            className="font-display lg:text-[60px]/[72px] text-[32px]/[48px] md:text-[42px]/[54.6px] tracking-[-0.02em] font-semibold lg:font-bold w-[370px] lg:w-[550px] md:w-[364px]"
+            className="font-display lg:text-[42px]/[54.6px] text-[32px]/[48px] md:text-[42px]/[54.6px] tracking-[-0.02em] font-semibold lg:font-bold w-[370px] lg:w-[550px] md:w-[364px]"
           >
             Trusted by Industry Leaders
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={controls}
-            className="text-[18px]/[27px] lg:text-[28px]/[42px]  font-sans font-regular w-[370px] lg:w-[623px] md:w-[623px]"
+            className="text-[18px]/[27px] lg:text-[20px]/[30px]  font-sans font-regular w-[370px] lg:w-[623px] md:w-[623px]"
           >
-            Ubakco offers tailored logisitics built  on trust and performance. Every delivery, big or small is managed with the precision our clients expect.
+            Proud to serve Nigeria's most prestigious companies and organizations
           </motion.p>
         </div>
         <div className="flex justify-between items-center w-full p-0 mt-[94px] overflow-hidden">
@@ -127,19 +128,22 @@ const Trusted = () => {
             height={100}
             className="object-cover absolute left-0 z-10"
           />
-          <div
-            className="flex items-center w-full justify-center"
-            style={{ gap: "80px" }}
-            ref={iconsContainerRef}
-          >
-            {iconComponents.map(({ Component, key }) => (
-              <div
-                key={key}
-                className="flex items-center justify-center flex-shrink-0"
-              >
-                <Component className="text-[100px] text-[#848484] size-[56px] object-cover" />
-              </div>
-            ))}
+          <div className="relative w-full overflow-hidden" style={{ maxWidth: '100vw' }}>
+            <div
+              className="flex items-center justify-center gap-[38px] lg:gap-[80px]"
+              ref={iconsContainerRef}
+              style={{ width: 'max-content' }}
+            >
+              {/* Duplicate icon list for seamless scroll */}
+              {[...iconComponents, ...iconComponents].map(({ Component, key }, idx) => (
+                <div
+                  key={key + '-' + idx}
+                  className="flex items-center justify-center flex-shrink-0"
+                >
+                  <Component className="text-[100px] text-[#848484] size-[28px] sm:size-[56px] object-cover" />
+                </div>
+              ))}
+            </div>
           </div>
           <Image
             src="/images/rightShadow.png"

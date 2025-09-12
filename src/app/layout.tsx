@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { poppins, montserrat } from "./fonts";
 import "./globals.css";
 import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
+import { Quote } from "lucide-react";
+import QuoteModal from "@/components/ui/QuoteModal";
 
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
   className={`antialiased` }
       >
+        <QuoteModal/>
        <Header/>
         {children}
         {/* <Footer/> */}

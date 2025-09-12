@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Statistics = () => {
+const Statistics = ({bg="#EFEFEF"}:{bg?:string}) => {
   const statistics = [
     {
       icon: "/icons/sta1.svg",
@@ -23,7 +23,7 @@ const Statistics = () => {
     },
   ];
   return (
-    <div className="w-full bg-[#EFEFEF] flex justify-center">
+    <div className={`w-full bg-[${bg}] flex justify-center`}>
       <section className="max-w-[1440px] w-full pt-[100px] px-[60px] pb-[188px]">
         <div className="relative border-y-[1px] border-[#CACACA] py-[40px] mt-[55px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-[41px] lg:gap-0">
                 <div className="separator w-[1px] left-[calc(100%/3)] absolute h-[70%] bg-[#CACACA] hidden lg:block"></div>
@@ -31,9 +31,9 @@ const Statistics = () => {
                 {statistics.map((record, index) => (
                   <div  key={index} className={`${index !== statistics.length -1 ? "border-b-[1px] lg:border-none border-[#CACACA] pb-[41px]" : ""}`}>
                     <div  
-                      className="flex flex-col gap-[40px] lg:gap-[56px]"
+                      className="flex flex-col gap-[40px]"
                     >
-                      <div className="flex flex-col gap-[32px] lg:gap-[48px]">
+                      <div className="flex flex-col gap-[32px]">
                         <Image
                           src={record.icon}
                           alt={record.title}
@@ -41,15 +41,15 @@ const Statistics = () => {
                           height={40}
                           className="w-[48px] h-[48px]"
                         />
-                        <h1 className="lg:text-[56px] text-[32px] font-semibold lg:font-bold lg:font-display font-sans">
+                        <h1 className="text-[32px] font-semibold font-sans">
                           {record.title}
                         </h1>
                       </div>
                       <div className="flex flex-col gap-[28px]">
-                        <p className="lg:text-[32px] text-[24px] font-semibold text-[#323232] font-display">
+                        <p className="lg:text-[28px] text-[24px] font-[500] text-[#323232] font-display">
                           {record.subtitle}
                         </p>
-                        <p className="lg:text-[24px] text-[20px]/[30px]  font-[400] font-sans text-[#323232] w-[266px] lg:w-[278px]">
+                        <p className="lg:text-[18px]/[27px] text-[20px]/[30px]  font-[400] font-sans text-[#323232] max-w-[305px] lg:w-full">
                           {record.label}
                         </p>
                       </div>

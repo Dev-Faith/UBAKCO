@@ -67,15 +67,15 @@ export function Navbar() {
 
   return (
     <NavigationMenu viewport={false} className="hidden lg:block">
-      <NavigationMenuList>
+      <NavigationMenuList className="flex gap-[32px]">
         {navItems.map((item) => (
           <NavigationMenuItem key={item.href}>
             <NavigationMenuLink 
               asChild 
               className={cn(
                 navigationMenuTriggerStyle(),
-                "focus:bg-transparent focus:text-inherit focus-visible:ring-0 focus-visible:outline-none focus:ring-0 outline-none",
-                pathname === item.href && "text-[#EA5C2B] font-semibold border-b-2 border-[#EA5C2B] bg-transparent hover:bg-transparent rounded-b-none"
+                "focus:bg-transparent focus:text-inherit font-[400] focus-visible:ring-0 focus-visible:outline-none focus:ring-0 hover:bg-red-0 px-0 outline-none",
+                pathname === item.href && "text-[#EA5C2B]  border-b-2 border-[#EA5C2B] bg-transparent hover:bg-transparent rounded-b-[4px]"
               )}
             >
               <Link href={item.href} className="text-[16px] font-[400] font-sans focus:outline-none focus:ring-0">

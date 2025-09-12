@@ -22,36 +22,37 @@ export default function Hero() {
   return (
     <section className="sticky top-0 bg-[#DCDEE0] min-w-screen h-screen 2xl:h-[872px] flex overflow-hidden -z-10 justify-center">
       <div className="w-full flex justify-center items-center">
-        <div className="lg:flex w-full  lg:w-full mx-auto">
+        <div className="lg:flex w-full lg:w-full mx-auto">
           <Image
             src="/images/gradient.png"
             alt="gradient"
             fill
             className="object-cover fixed pointer-events-none z-[8]"
           />
-          <div className="left-hero w-full  max-w-[calc(100vw/2+50vw)] items-center 2xl:pt-[20%] 2xl:pl-[128px] justify-center md:justify-start  xl:h-full px-[16px] md:px-[60px] xl:px-[60px] pt-[130%] md:pt-[120%] xl:pt-[201px] pb-[130px] md:pb-0 flex">
+          <div className="left-hero w-full  max-w-[calc(100vw/2+50vw)] items-center 2xl:pt-[20%] 2xl:pl-[128px] justify-center sm:justify-start  xl:h-full px-[16px] sm:px-[60px] xl:px-[60px] pt-[130%] sm:pt-[120%] xl:pt-[201px] sm:pb-0 flex">
             <div
               ref={ref}
-              className=" w-[343px] xl:w-[559px] flex flex-col gap-[32px] xl:gap-[48px] 2xl:pl-[190px] "
+              className="absolute inset-0 flex flex-col lg:flex-row lg:justify-center items-center mt-[138px]"
             >
-              <motion.h1
+             <div className="flex flex-col gap-[24px] lg:gap-[32px] w-full max-w-[1440px] px-[16px] sm:px-[60px]">
+               <motion.h1
                 initial={{ opacity: 0, y: 40 }}
                 animate={controls}
-                className="font-display text-[32px]/[41.6px] xl:text-[75px]/[82px] font-bold text-[#1C1C1C] tracking-[-0.02em] md:w-[485px] md:text-[60px]/[74px]"
+                className="font-display text-[32px]/[41.6px] xl:text-[75px]/[82px] font-bold text-[#1C1C1C] tracking-[-0.02em] sm:w-[485px] sm:text-[60px]/[74px]"
               >
                 Ubakco delivers from airport to anywhere
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 40 }}
                 animate={controls}
-                className="font-sans text-[#323232] text-[14px]/[21px] xl:text-[20px]/[30px] md:text-[20px]/[30px] md:w-[485px]"
+                className="font-sans text-[#323232] text-[14px]/[21px] xl:text-[20px]/[30px] sm:text-[20px]/[30px] sm:w-[485px]"
               >
                 We move goods with precision, care, and a commitment to
                 excellence across Nigeria and beyond. From standard delivery to
                 white glove logistics.
               </motion.p>
-              <Button className="flex items-center gap-[12px] w-[209px] h-[55px]">
-                Request a Quote{" "}
+              <Button fn="quote" className="flex items-center gap-[12px] w-[209px] h-[55px] pointer-events-auto">
+                Request a Quote
                 <Image
                   src="/icons/arrow-angled.png"
                   alt="arrow"
@@ -59,23 +60,31 @@ export default function Hero() {
                   height={24}
                 />
               </Button>
+             </div>
             </div>
           </div>
-          <div className=" h-[40%] md:h-[50%] xl:h-full w-full flex relative overflow-hidden">
+          <div className="sm:h-[50%] h-full xl:h-full w-full flex relative overflow-hidden">
             <Image
-              src="/images/hero-img.png"
+              src="/images/stepper.png"
               alt="Hero Image"
               width={725}
               height={1024}
-              className="w-full h-full relative mt-[92px] top-[-64px] xl:mt-0 xl:top-[64px] md:top-[-30px]  object-cover"
+              className="w-full h-full hidden lg:block aboslute mt-[92px] top-[-64px] xl:mt-0 xl:top-[64px] sm:top-[-30px] pointer-events-none object-cover"
             />
             <Image
+              src="/images/stepperTab.png"
+              alt="Hero Image"
+              width={725}
+              height={1024}
+              className="w-full h-full lg:hidden aboslute mt-[92px] top-[-64px] xl:mt-0 xl:top-[64px] sm:top-[-30px] pointer-events-none object-cover"
+            />
+            {/* <Image
               src="/images/dash.png"
               alt="dash"
               width={100}
               height={100}
-              className="w-[20px] h-screen 2xl:h-[872px] left-[10%] xl:left-0 xl:right-[98%] top-[-63%] xl:top-0 md:top-[-33%] md:left-[244px] md:right-[-20%] md:flex rotate-90 xl:rotate-0 absolute"
-            />
+              className="w-[20px] h-screen 2xl:h-[872px] left-[10%] pointer-events-none xl:left-0 xl:right-[98%] top-[-63%] xl:top-0 sm:top-[-33%] sm:left-[244px] sm:right-[-20%] sm:flex rotate-90 xl:rotate-0 absolute"
+            /> */}
           </div>
         </div>
       </div>

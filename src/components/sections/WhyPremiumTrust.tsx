@@ -116,8 +116,8 @@ const WhyPremiumTrust = () => {
 
   return (
     <div className="w-full bg-white flex justify-center">
-      <section className="max-w-[1440px] w-full pt-[120px] px-[16px] lg:px-[60px] pb-[420px]">
-        <h1 className="font-display text-[32px]/[48px] lg:text-[42px]/[54.6px] md:text-[42px]/[54.6px] md:w-[500px] tracking-[-0.02em] font-bold w-[370px] lg:w-[717px]">
+      <section className="max-w-[1440px] w-full pt-[120px] px-[16px] sm:px-[60px] pb-[420px]">
+        <h1 className="font-display text-[32px]/[48px] lg:text-[42px]/[54.6px] sm:text-[42px]/[54.6px] sm:w-[500px] tracking-[-0.02em] font-bold w-[370px] lg:w-[717px]">
         Why Premium Clients Trust Ubakco?
       </h1>
       <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-[120px] gap-y-[24px] mt-[70px] relative h-[320px]">
@@ -131,7 +131,7 @@ const WhyPremiumTrust = () => {
             }`}
           >
             <Image src="icons/star.svg" alt="star" width={40} height={40} className="size-[40px]" />
-            <h2 className="  text-[20px]/[30px] lg:text-[28px]/[42px] md:text-[28px]/[42px] tracking-[0.05em] w-[443.33px]">
+            <h2 className="  text-[20px]/[30px] lg:text-[28px]/[42px] sm:text-[28px]/[42px] tracking-[-0.02em] w-[443.33px]">
               {record.title}
             </h2>
             {record.separation && <hr className="hidden lg:block" />}
@@ -140,7 +140,7 @@ const WhyPremiumTrust = () => {
         <div className="absolute top-[50%] h-[1px] w-full bg-[#CACACA] hidden lg:block"></div>
       </div>
   {/* Carousel with fading shadows */}
-  <div className="carousel w-full overflow-x-hidden mt-[120px] md:mt-[250px] relative " style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+  <div className="carousel w-full overflow-x-hidden mt-[120px] sm:mt-[250px] relative " style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
         <div
           ref={carouselRef}
           className="flex gap-[12px] hide-scrollbar"

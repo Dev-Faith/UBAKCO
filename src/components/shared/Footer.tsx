@@ -1,13 +1,22 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "../ui/buttons/Button";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
+  function openQuoteModal() {
+    if (typeof window !== 'undefined') {
+      const event = new CustomEvent('openQuoteModal');
+      window.dispatchEvent(event);
+    }
+  }
   const quickLinks = [
-    { title: "Home", url: "#" },
-    { title: "About", url: "#" },
-    { title: "Services", url: "#" },
+    { title: "Home", url: "/" },
+    { title: "About", url: "/about" },
+    { title: "Services", url: "/services" },
     { title: "Track Package", url: "#" },
     { title: "Request a Quote", url: "#" },
     { title: "Blog", url: "#" },
@@ -27,7 +36,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-[#000000] flex justify-center">
-      <div className="max-w-[1440px] w-full bg-[#000000] px-[16px] md:px-[60px] lg:px-[60px] pt-[100px] flex flex-col gap-[100px]">
+  <div className="max-w-[1440px] w-full bg-[#000000] px-[16px] sm:px-[60px] lg:px-[60px] pt-[100px] flex flex-col gap-[100px]">
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="flex flex-col gap-[32px]">
             <Image
@@ -46,15 +55,26 @@ export default function Footer() {
               <p className="font-display text-[24px] font-semibold text-[#ffffff]">
                 Quick Links
               </p>
-              <nav className="flex flex-col gap-[40px] mt-[16px] text-[18px]/[40px] text-[#B2B2B2] ">
+              <nav className="flex flex-col gap-[32px] mt-[16px] text-[18px] text-[#B2B2B2]">
                 {quickLinks.map((link) => (
-                  <a
-                    key={link.title}
-                    href={link.url}
-                    className="block text-[#B2B2B2] hover:text-white"
-                  >
-                    {link.title}
-                  </a>
+                  link.title === "Request a Quote" ? (
+                    <button
+                      key={link.title}
+                      type="button"
+                        onClick={openQuoteModal}
+                      className="block text-[#B2B2B2] hover:text-white w-full text-left py-2 px-0 bg-transparent border-none cursor-pointer font-inherit"
+                    >
+                      {link.title}
+                    </button>
+                  ) : (
+                    <Link
+                      key={link.title}
+                      href={link.url}
+                      className="block text-[#B2B2B2] hover:text-white"
+                    >
+                      {link.title}
+                    </Link>
+                  )
                 ))}
               </nav>
             </div>
@@ -62,15 +82,15 @@ export default function Footer() {
               <p className="font-display text-[24px] font-semibold text-[#ffffff]">
                 Services
               </p>
-              <nav className="flex flex-col gap-[40px] mt-[16px] text-[18px]/[40px] text-[#B2B2B2] ">
+              <nav className="flex flex-col gap-[32px] mt-[16px] text-[18px] text-[#B2B2B2] ">
                 {servicesLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.title}
                     href={link.url}
                     className="block text-[#B2B2B2] hover:text-white"
                   >
                     {link.title}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
@@ -78,7 +98,7 @@ export default function Footer() {
               <p className="font-display text-[24px] font-semibold text-[#ffffff]">
                 Busines Hours
               </p>
-              <nav className="flex flex-col gap-[40px] mt-[16px] text-[18px]/[40px] text-[#B2B2B2] ">
+              <nav className="flex flex-col gap-[32px] mt-[16px] text-[18px] text-[#B2B2B2] ">
                 {businesshourLink.map((link) => (
                   <p key={link} className=" text-[#B2B2B2]">
                     {link}

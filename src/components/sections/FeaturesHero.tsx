@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useRef, useEffect } from "react";
 import { Button } from "../ui/buttons/Button";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -21,7 +22,7 @@ const FeaturesHero = () => {
   }, [inView, controls]);
 
   return (
-    <div className="w-full bg-white flex justify-center z-[-10] max-h-[500px] md:max-h-[700px] overflow-hidden ">
+    <div className="w-full bg-white flex justify-center z-[-10] max-h-[500px] sm:max-h-[700px] overflow-hidden ">
       <section className=" w-full lg:mt-[88px] relative lg-h-full h-[20%] flex justify-center">
         <div className="relative flex justify-center">
           <Image
@@ -36,33 +37,35 @@ const FeaturesHero = () => {
             alt="features-shadow"
             width={865}
             height={685}
-            className="absolute lg:top-0 top-[10%] md:w-[100vw] w-[500px] h-[100vh]"
+            className="absolute lg:top-0 top-[10%] sm:w-[100vw] w-[500px] h-[100vh]"
           />
-          <div className=" absolute w-full  max-w-[1440px] px-[16px] lg:px-[60px] md:px-[60px] lg:top-[20%] top-[20%] md:top-[30%] flex flex-col gap-[40px]">
+          <div className=" absolute inset-0 w-full flex justify-center">
             <div
               ref={ref}
-              className=" flex flex-col gap-[24px] w-full "
+              className=" flex flex-col gap-[24px] w-full max-w-[1440px]  px-[16px] sm:px-[60px] pt-[192px]"
             >
               <motion.h1
                 initial={{ opacity: 0, y: 40 }}
                 animate={controls}
-                className="font-bold text-[24px]/[36px]  lg:text-[48px]/[62.4px] md:w-[400px] md:text-[40px]/[50px]  tracking-[-0.02em] font-display w-[250px] lg:w-[748px] text-white"
+                className="font-bold text-[24px]/[36px]  lg:text-[48px]/[62.4px] sm:w-[400px] sm:text-[40px]/[50px]  tracking-[-0.02em] font-display w-[250px] lg:w-[748px] text-white"
               >
                 Premium & White-Glove Logistics
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 40 }}
                 animate={controls}
-                className="font-sans text-white text-[14px]/[21px] lg:text-[18px]/[27px] md:text-[18px]/[27px] w-[400px]  font-[400] lg:w-[516px]"
+                className="font-sans text-white text-[14px]/[21px] lg:text-[18px]/[27px] sm:text-[18px]/[27px] w-[400px]  font-[400] lg:w-[516px]"
               >
                 For luxury, executive, and high-value deliveries that demand
                 absolute care, privacy and precision.
               </motion.p>
+              <Link href="/contact">
+                <Button className="w-[209px] text-white flex items-center gap-[12px]">
+                  Contact Us
+                  <FaArrowRight />
+                </Button>
+              </Link>
             </div>
-            <Button className="w-[209px] text-white flex items-center gap-[12px]">
-              Contact Us
-              <FaArrowRight />{" "}
-            </Button>
           </div>
         </div>
       </section>

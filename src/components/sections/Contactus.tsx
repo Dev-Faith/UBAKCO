@@ -17,7 +17,7 @@ const Contactus = () => {
   }, [inView, controls]);
 
   return (
-    <section className="lg:mt-[95px] relative overflow-hidden h-[50vh] lg:h-full z-[9]">
+    <section className="lg:mt-[95px] w-full relative overflow-hidden h-[50vh] lg:h-full z-[9]">
       <Image
         src="/images/contactusLeftShadow.png"
         alt="Contact Us Left Shadow"
@@ -39,17 +39,19 @@ const Contactus = () => {
         height={100}
         className="absolute lg:bottom-0 bottom-[20px] right-0 h-[550px]"
       />
-      <div ref={ref} className="absolute top-[50%] lg:top-[35%] left-[10%] md:top-[40%]">
-        <motion.h1
+      <div ref={ref} className="absolute w-full inset-0  flex justify-center">
+       <div className=" max-w-[1440px] w-full h-full px-[16px] sm:px-[60px] translate-y-1/2">
+         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={controls}
-          className="text-white font-bold font-display text-[24px]/[36px] lg:text-[48px]/[62.4px] tracking-[-0.02em] md:text-[48px]/[62.4px] "
+          className="text-white font-bold font-display text-[24px]/[36px] lg:text-[48px]/[62.4px] tracking-[-0.02em] sm:text-[48px]/[62.4px] "
         >Contact Ubakco</motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           animate={controls}
-          className="font-[400] text-white text-[14px]/[21px] lg:text-[18px]/[27px] md:text-[18px]/[27px]"
-        >Lets get your shipment moving.</motion.p>
+          className="font-[400] text-white text-[14px]/[21px] lg:text-[18px]/[27px] sm:text-[18px]/[27px]"
+        >Let's get your shipment moving.</motion.p>
+       </div>
       </div>
     </section>
   );

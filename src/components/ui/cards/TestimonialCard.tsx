@@ -4,29 +4,15 @@ import { FaStar } from "react-icons/fa";
 
 const TestimonialCard = ({image, rating, quote, name, office}:{image: string, rating: string, quote: string, name: string, office: string}) => {
   return (
-    <div className=" w-[370px] lg:w-[580px] md:w-full p-[32px] bg-[#ffffff] rounded-[30px] shadow-[0_0_40px_0_rgba(0,0,0,0.25)]">
-      <div className="flex items-center justify-between">
-        <Image
-          src={image}
-          alt={image}
-          width={155}
-          height={48}
-          className="w-[102px] h-[31px] lg:w-[155px] lg:h-[48px]"
-        />
-        <p className="lg:text-[24px] text-[15.97px] font-semibold flex items-center gap-[6px]">
-          {rating}{" "}
-          <span>
-            <FaStar className="text-[#EA5C2B] lg:size-[24px] size-[16px]" />
-          </span>
-        </p>
+    <div className="flex flex-col justify-between sm:w-full w-full lg:min-w-[433px]  p-[32px] bg-white rounded-[16px]">
+      <div className="top flex items-center justify-between">
+        <div className="top-texts flex flex-col gap-0">
+          <p className="text-[24px]/[42px] font-[600] text-[#242424] font-display">{name}</p>
+          <p className="text-[#EA5C2B] text-[16px]/[24px] font-[500]">{office}</p>
+        </div>
+        <Image src={image} alt={name} width={40} height={40} />
       </div>
-      <p className="lg:text-[26px] text-[20px]/[30px] w-[306px] md:w-full font-sans font-regular lg:w-[516px] w-[306px] mt-[48px]">
-        {quote}
-      </p>
-      <div className="mt-[32px]">
-        <p className="lg:text-[32px] text-[22px]/[28px] font-semibold font-display text-[#242424]">{name}</p>
-        <p className="lg:text-[24px] text-[16px]/[24px] font-sans font-regular text-[#666666]">{office}</p>
-      </div>
+      <p className="desc mt-[32px] text-[18px]/[30px] font-[400]">{quote}</p>
     </div>
   );
 };

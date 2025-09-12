@@ -56,11 +56,11 @@ const PremiumOfferings = () => {
 
   return (
     <div className="w-full bg-[#EFEFEF] flex justify-center z-9">
-      <section className="max-w-[1440px] w-full rounded-tl-[50px]  pb-[514px] rounded-tr-[50px] overflow-hidden">
-        <div className="relative  lg:pt-[150px] pt-[70px] px-[16px] md:px-[60px] lg:pl-[60px] 2xl:pl-[120px] flex items-start justify-between overflow-hidden z-9">
+      <section className="max-w-[1440px] w-full rounded-tl-[50px]  pb-[514px] rounded-tr-[50px]  px-[16px] sm:px-[60px] overflow-hidden">
+        <div className="relative  lg:pt-[150px] pt-[70px] flex items-start justify-between overflow-hidden z-9">
           <div
             ref={ref}
-            className="left flex flex-col lg:gap-[64px] gap-[24px] "
+            className="left flex flex-col lg:gap-[64px] gap-[24px]"
           >
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
@@ -89,8 +89,8 @@ const PremiumOfferings = () => {
             />
           </div>
         </div>
-        <div className="px-[60px] w-full mt-[54px] lg:mt-[100px] flex justify-center">
-          <div className="separator w-[1800px] mx-auto lg:border-t border-[#CACACA] px-[20px] py-[75px] lg:grid lg:grid-cols-2 lg:gap-y-[115px] flex flex-col relative justify-items-center ">
+        <div className=" w-full mt-[54px] lg:mt-[100px] sm:mt-[0px] flex justify-center">
+          <div className="separator w-full mx-auto lg:border-t border-[#CACACA] py-[75px] lg:grid lg:grid-cols-2 lg:gap-y-[115px] flex flex-col relative justify-center ">
             {featuresCardItems.map((item, index) => (
               <div
                 key={index}
@@ -98,11 +98,7 @@ const PremiumOfferings = () => {
                   featuresCardItems.length - 1 !== index
                     ? "border-b-[1px] lg:border-none border-[#CACACA]"
                     : ""
-                } ${
-                  index !== 3 && index !== 1
-                    ? "lg:border-r-[1px] border-[#CACACA] lg:pr-[24px]"
-                    : ""
-                } pb-[24px] lg:pb-0 `}
+                }  pb-[24px] lg:pb-0 `}
               >
                 <FeatureCard
                   icon={item.icon}

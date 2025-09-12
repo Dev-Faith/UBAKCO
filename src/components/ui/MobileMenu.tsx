@@ -56,7 +56,7 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="w-full max-w-[400px] h-screen bg-[#EFEFEF] shadow-xl p-8 flex flex-col gap-8 justify-between"
+              className="w-full max-w-[400px] h-[100dvh] bg-[#EFEFEF] shadow-xl p-8 flex flex-col gap-8 justify-between"
             >
             <div>
               <button
@@ -89,7 +89,7 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
               Coming soon
             </div>
           </Button>
-          <Button className="ml-2 cursor-pointer">Request a Quote</Button>
+          <Button fn="quote" className="ml-2 cursor-pointer">Request a Quote</Button>
             </div>
             </motion.div>
           </motion.div>
