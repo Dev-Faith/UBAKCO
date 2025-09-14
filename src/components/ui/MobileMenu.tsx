@@ -56,7 +56,7 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="w-full max-w-[400px] h-[100dvh] bg-[#EFEFEF] shadow-xl p-8 flex flex-col gap-8 justify-between"
+              className="w-full max-w-[400px] h-[100dvh] bg-[#EFEFEF] shadow-xl p-[16px] sm:p-[60px] flex flex-col justify-between"
             >
             <div>
               <button
@@ -66,7 +66,7 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
               >
                 ×
               </button>
-              <nav className="flex flex-col gap-8 mt-8">
+              <nav className="flex flex-col justify-between mt-8 h-full">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
