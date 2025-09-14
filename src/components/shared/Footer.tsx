@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/buttons/Button";
@@ -7,11 +8,16 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
-  function openQuoteModal() {
-    if (typeof window !== 'undefined') {
+  const [quoteModalTrigger, setQuoteModalTrigger] = React.useState(false);
+  React.useEffect(() => {
+    if (quoteModalTrigger && typeof window !== 'undefined') {
       const event = new CustomEvent('openQuoteModal');
       window.dispatchEvent(event);
+      setQuoteModalTrigger(false);
     }
+  }, [quoteModalTrigger]);
+  function openQuoteModal() {
+    setQuoteModalTrigger(true);
   }
   const quickLinks = [
     { title: "Home", url: "/" },

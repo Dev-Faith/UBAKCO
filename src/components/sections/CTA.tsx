@@ -29,7 +29,7 @@ const CTA = ({
             height={493}
             className="w-full h-[453px] object-cover relative rounded-[32px] lg:rounded-[16px] sm:hidden lg:hidden"
           />
-          <div className=" absolute left-[40px] lg:left-[130px] sm:left-[60px] top-[50px] sm:top-[80px] lg:top-[115.5px] flex flex-col gap-[30px] sm:gap-[24px]">
+          <div className=" absolute left-[7%] lg:left-[130px] sm:left-[60px] top-[50px] sm:top-[80px] lg:top-[115.5px] flex flex-col gap-[30px] sm:gap-[24px]">
             <h1 className="lg:text-[52px]/[62.4px] w-[269px] sm:w-[346px] sm:text-[32px]/[41.6px] text-[32px]/[41.6px] lg:w-[549px] tracking-[-0.02em] font-bold font-display text-[#ffff]">
               Let's make your next delivery effortless
             </h1>
