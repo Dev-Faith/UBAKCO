@@ -8,17 +8,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
-  const [quoteModalTrigger, setQuoteModalTrigger] = React.useState(false);
-  React.useEffect(() => {
-    if (quoteModalTrigger && typeof window !== 'undefined') {
-      const event = new CustomEvent('openQuoteModal');
-      window.dispatchEvent(event);
-      setQuoteModalTrigger(false);
-    }
-  }, [quoteModalTrigger]);
-  function openQuoteModal() {
-    setQuoteModalTrigger(true);
-  }
   const quickLinks = [
     { title: "Home", url: "/" },
     { title: "About", url: "/about" },
@@ -67,7 +56,6 @@ export default function Footer() {
                     <button
                       key={link.title}
                       type="button"
-                        onClick={openQuoteModal}
                       className="block text-[#B2B2B2] hover:text-white w-full text-left py-2 px-0 bg-transparent border-none cursor-pointer font-inherit"
                     >
                       {link.title}
