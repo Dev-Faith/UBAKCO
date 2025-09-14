@@ -102,7 +102,7 @@ const Trusted = () => {
   }, [inView, controls]);
 
   return (
-    <section className="w-full flex justify-center bg-white">
+    <section className=" relative z-[2] w-full flex justify-center bg-white">
       <div className="mt-[130px] w-full max-w-[1440px] mx-auto relative pb-[150px] px-[16px] sm:px-[60px] ">
         <div ref={ref} className="flex flex-col gap-[24px] lg:gap-[32px]">
           <motion.h1
@@ -120,7 +120,7 @@ const Trusted = () => {
             Proud to serve Nigeria's most prestigious companies and organizations
           </motion.p>
         </div>
-        <div className="flex justify-between items-center w-full p-0 mt-[94px] overflow-hidden">
+        <div className="flex relative justify-between items-center w-full p-0 mt-[94px] overflow-hidden">
           <Image
             src="/images/leftShadow.png"
             alt="Left Shadow"
@@ -150,7 +150,7 @@ const Trusted = () => {
             alt="Right Shadow"
             width={100}
             height={100}
-            className="object-cover absolute right-0 z-10"
+            className="object-cover absolute -right-2 z-10"
           />
         </div>
       </div>

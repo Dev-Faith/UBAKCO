@@ -31,7 +31,7 @@ const UbakcoLogistics = () => {
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={controls}
-            className=" text-[18px]/[27px] text-[#656565] sm:w-[540px] lg:text-[28px]/[42px] w-[370px] lg:w-[434px] font-[400] tracking-[0.05em]"
+            className=" text-[18px]/[27px] text-[#656565] sm:w-[540px] lg:text-[28px]/[42px] w-[370px] lg:w-[434px] font-[400] tracking-[-0.02em]"
           >
             Get direct access to a dedicated logistics expert who manages
             everything. From pickups to real-time tracking.

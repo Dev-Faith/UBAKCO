@@ -131,7 +131,7 @@ const WhyPremiumTrust = () => {
             }`}
           >
             <Image src="icons/star.svg" alt="star" width={40} height={40} className="size-[40px]" />
-            <h2 className="  text-[20px]/[30px] lg:text-[28px]/[42px] sm:text-[28px]/[42px] tracking-[-0.02em] w-[443.33px]">
+            <h2 className="text-[20px]/[30px] lg:text-[28px]/[42px] sm:text-[28px]/[42px] tracking-[-0.02em] w-full">
               {record.title}
             </h2>
             {record.separation && <hr className="hidden lg:block" />}

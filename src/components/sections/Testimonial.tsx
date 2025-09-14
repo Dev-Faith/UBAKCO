@@ -171,7 +171,7 @@ const Testimonial = () => {
   }, [inView, controls]);
 
   return (
-    <div className="flex justify-center 2xl:w-screen bg-[#EFEFEF] sm:h-auto">
+    <div className="relative z-[2] flex justify-center 2xl:w-screen bg-[#EFEFEF] sm:h-auto">
       <section ref={sectionRef} className="2xl:w-[1440px] w-full sm:px-[60px] px-[16px]">
         <div className="relative  lg:pt-[150px] pt-[60px] flex items-start justify-between overflow-hidden">
           <div

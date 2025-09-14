@@ -36,7 +36,7 @@ const Records = () => {
   }, [inView, controls]);
 
   return (
-    <section className="w-full bg-white">
+    <section className=" relative z-[2] w-full bg-white">
       <div className="lg:pt-[150px] pt-[47px]  w-full max-w-[1440px] mx-auto ">
         <motion.h1
           ref={ref}

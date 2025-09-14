@@ -2,11 +2,13 @@
 import React from "react";
 import clsx from "clsx";
 import { useStore } from "@/lib/store/useStore";
+import { useRouter } from "next/navigation";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "tertiary" | "outline";
   size?: "sm" | "md" | "lg";
-  fn?: "quote";
+  fn?: "quote" | "link";
+  href?: string;
 }
 
 const baseStyles = "inline-flex items-center justify-center font-medium rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
@@ -26,11 +28,22 @@ const sizeStyles: Record<string, string> = {
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, variant = "primary", size = "md", fn, children, ...props },
+    { className, variant = "primary", size = "md", href, fn, children, ...props },
     ref
   ) => {
 
-    const {openQuoteModal} = useStore();
+    const { openQuoteModal } = useStore();
+    const router = useRouter();
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+      if (fn === "quote") {
+        openQuoteModal();
+      } else if (fn === "link" && href) {
+        e.preventDefault();
+        router.push(href);
+      } else if (props.onClick) {
+        props.onClick(e);
+      }
+    };
     return (
       <button
         ref={ref}
@@ -42,7 +55,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           className
         )}
         {...props}
-        onClick={fn === "quote" ? () => openQuoteModal() : props.onClick}
+        onClick={handleClick}
       >
         {children}
       </button>

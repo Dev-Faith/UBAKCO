@@ -54,7 +54,7 @@ export default function Features() {
   }, [inView, controls]);
 
   return (
-    <section className="bg-[#EFEFEF] w-full rounded-tl-[50px] lg:pb-[113px] rounded-tr-[50px] overflow-hidden ">
+    <section className=" relative bg-[#EFEFEF] w-full rounded-tl-[50px] lg:pb-[113px] rounded-tr-[50px] overflow-hidden z-[2]">
       <div className="max-w-[1440px] w-full mx-auto px-[16px] sm:px-[60px]">
         <div className="relative lg:pt-[150px] pt-[70px]  flex items-start justify-between overflow-hidden w-full max-w-[1440px] mx-auto">
           <div

@@ -26,7 +26,7 @@ const WedLove = () => {
         <h1 className=" text-[32px]/[48px] sm:w-[500px] sm:text-[42px]/[54.6px] lg:text-[42px]/[54.6px] tracking-[-0.02em] w-[249px] lg:w-[447px] font-bold font-display">
           We’d love to hear from you
         </h1>
-        <p className="text-[#323232] text-[18px]/[27px] tracking-[0.05em] lg:text-[24px]/[36px] w-[370px] lg:w-[631px] sm:w-full sm:text-[28px]/[42px]">
+        <p className="text-[#323232] text-[18px]/[27px] tracking-[-0.02em] lg:text-[24px]/[36px] w-[370px] lg:w-[631px] sm:w-full sm:text-[28px]/[42px]">
           Whether you’re requesting a quote, tracking a delivery, or exploring
           premium logistics solutions. Our team is ready to assist.
         </p>
@@ -35,7 +35,7 @@ const WedLove = () => {
         {address.map((item, index) => (
           <div
             key={index}
-            className={`flex flex-col gap-[40px] w-[375px]  sm:w-full h-[260px] ${
+            className={`flex flex-col gap-[40px] w-full h-[260px] ${
               address.length - 1 !== index
                 ? "lg:pr-[75px] lg:border-r-[1px] border-b-[1px] lg:border-b-0 pb-[41px] lg:pb-0 border-[#CACACA]"
                 : ""

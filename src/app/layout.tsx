@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { poppins, montserrat } from "./fonts";
 import "./globals.css";
 import Header from "@/components/shared/Header";
+import WhatsAppFloatingButton from "@/components/ui/WhatsAppFloatingButton";
 import { Quote } from "lucide-react";
 import QuoteModal from "@/components/ui/QuoteModal";
 
@@ -25,10 +26,11 @@ export default function RootLayout({
       <body
   className={`antialiased` }
       >
-        <QuoteModal/>
-       <Header/>
-        {children}
-        {/* <Footer/> */}
+  <QuoteModal/>
+  <Header/>
+  {children}
+  <WhatsAppFloatingButton />
+  {/* <Footer/> */}
       </body>
     </html>
   );

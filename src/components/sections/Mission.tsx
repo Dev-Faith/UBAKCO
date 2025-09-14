@@ -56,29 +56,29 @@ const Mission = () => {
   }, [inView, controls]);
 
   return (
-    <section className="sticky relative top-0 h-screen pb-[120px]  lg:top-0 -z-9 .mission lg:min-h-[calc(100vh+10%)] lg:h-screen pt-[120px] lg:pt-[120px] bg-white rounded-tl-[50px] rounded-tr-[50px] flex lg:items-center lg:justify-center w-full">
+    <section className="sticky relative top-0 h-screen pb-[120px]  lg:top-0  z-[1] .mission lg:min-h-[calc(100vh+10%)] lg:h-screen pt-[120px] lg:pt-[120px] bg-white rounded-tl-[50px] rounded-tr-[50px] flex lg:items-center lg:justify-center w-full">
       <div className="flex flex-col lg:flex-row h-full px-[16px] sm:px-[60px] max-h-[1029px] h-full  items-start justify-between w-full max-w-[1440px] mx-auto relative">
         <div
           ref={ref}
-          className="mission-left flex flex-col gap-[32px] lg:gap-[64px] w-[700px] sm:w-[617px]"
+          className="mission-left flex flex-col gap-[32px] lg:gap-[64px] w-full sm:w-full lg:w-[617px]"
         >
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={controls}
-            className="lg:text-[42px]/[54.6px] text-[26px]/[33.8px] sm:text-[42px]/[54.6px] tracking-[-0.02em] font-semibold lg:font-bold font-display w-[370px] sm:w-[714px] lg:w-[427px] tracking-[-0.02em]"
+            className="lg:text-[42px]/[54.6px] text-[26px]/[33.8px] sm:text-[42px]/[54.6px] tracking-[-0.02em] font-semibold lg:font-bold font-display w-[370px] sm:max-w-[714px] sm:w-full lg:w-[427px] tracking-[-0.02em]"
           >
             Logistics that Move Your Business Forward
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={controls}
-            className=" w-[370px] lg:w-[516px] text-[#656565] sm:w-[617px] sm:text-[20px]/[30px] font-sans text-[18px]/[27px] font-regular tracking-[-0.02em]"
+            className=" w-[370px] lg:w-[516px] text-[#656565] sm:max-w-[617px] sm:w-full sm:text-[20px]/[30px] font-sans text-[18px]/[27px] font-regular tracking-[-0.02em]"
           >
             From airport-to-airport shipments to executive white-glove
             logistics, Ubakco provides secure, efficient, and time-critical
             delivery solutions across Nigeria and beyond.
           </motion.p>
-          <Button className="w-[209px] h-[55px] flex items-center gap-[12px]">
+          <Button type="button" className="w-[209px] h-[55px] flex items-center gap-[12px] z-[24]" fn="link" href="/about">
             Our Mission{" "}
             <Image
               src="/icons/arrow-angled.png"

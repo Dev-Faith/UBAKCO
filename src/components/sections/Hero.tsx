@@ -20,7 +20,7 @@ export default function Hero() {
   }, [inView, controls]);
 
   return (
-    <section className="sticky top-0 bg-[#DCDEE0] min-w-screen h-screen 2xl:h-[872px] flex overflow-hidden -z-10 justify-center">
+    <section className="sticky top-0 bg-[#DCDEE0] min-w-screen h-screen 2xl:h-[872px] flex overflow-hidden z-[1] justify-center">
       <div className="w-full flex justify-center items-center">
         <div className="lg:flex w-full lg:w-full mx-auto">
           <Image

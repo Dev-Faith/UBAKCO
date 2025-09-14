@@ -9,20 +9,20 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   const quickLinks = [
-    { title: "Home", url: "/" },
-    { title: "About", url: "/about" },
-    { title: "Services", url: "/services" },
-    { title: "Track Package", url: "#" },
-    { title: "Request a Quote", url: "#" },
-    { title: "Blog", url: "#" },
+  { title: "Home", url: "/" },
+  { title: "About", url: "/about" },
+  { title: "Services", url: "/services" },
+  { title: "Track Package", url: "/about" },
+  { title: "Request a Quote", url: "/contact#requestQuote" },
+  { title: "Blog", url: "/about" },
   ];
   const servicesLinks = [
-    { title: "Nationwide delivery", url: "#" },
-    { title: "Corporate Cargo", url: "#" },
-    { title: "Import/Export", url: "#" },
-    { title: "Premium & White Glove", url: "#" },
-    { title: "Airport Services", url: "#" },
-    { title: "Last Mile delivery", url: "#" },
+  { title: "Nationwide delivery", url: "/services" },
+  { title: "Corporate Cargo", url: "/services" },
+  { title: "Import/Export", url: "/services" },
+  { title: "Premium & White Glove", url: "/services" },
+  { title: "Airport Services", url: "/services" },
+  { title: "Last Mile delivery", url: "/services" },
   ];
   const businesshourLink = [
     "Monday - Friday: 8:00 AM - 6:00 PM",
@@ -30,8 +30,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-[#000000] flex justify-center">
-  <div className="max-w-[1440px] w-full bg-[#000000] px-[16px] sm:px-[60px] lg:px-[60px] pt-[100px] flex flex-col gap-[100px]">
+    <footer className="relative z-[2] w-full bg-[#000000] flex justify-center">
+      <div className="max-w-[1440px] w-full bg-[#000000] px-[16px] sm:px-[60px] lg:px-[60px] pt-[100px] flex flex-col gap-[100px]">
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="flex flex-col gap-[32px]">
             <Image
@@ -51,25 +51,15 @@ export default function Footer() {
                 Quick Links
               </p>
               <nav className="flex flex-col gap-[32px] mt-[16px] text-[18px] text-[#B2B2B2]">
-                {quickLinks.map((link) => (
-                  link.title === "Request a Quote" ? (
-                    <button
-                      key={link.title}
-                      type="button"
-                      className="block text-[#B2B2B2] hover:text-white w-full text-left py-2 px-0 bg-transparent border-none cursor-pointer font-inherit"
-                    >
-                      {link.title}
-                    </button>
-                  ) : (
-                    <Link
-                      key={link.title}
-                      href={link.url}
-                      className="block text-[#B2B2B2] hover:text-white"
-                    >
-                      {link.title}
-                    </Link>
-                  )
-                ))}
+                {quickLinks.map((link) =>
+                  <Link
+                    key={link.title}
+                    href={link.url}
+                    className="block text-[#B2B2B2] hover:text-white"
+                  >
+                    {link.title}
+                  </Link>
+                )}
               </nav>
             </div>
             <div>
