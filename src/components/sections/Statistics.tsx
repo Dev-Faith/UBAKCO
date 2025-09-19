@@ -24,7 +24,7 @@ const Statistics = ({bg="#EFEFEF"}:{bg?:string}) => {
   ];
   return (
     <div className={`w-full bg-[${bg}] flex justify-center`}>
-      <section className="max-w-[1440px] w-full pt-[100px] px-[60px] pb-[188px]">
+      <section className="max-w-[1440px] w-full pt-[100px] px-[16px] sm:px-[60px] pb-[188px]">
         <div className="relative border-y-[1px] border-[#CACACA] py-[40px] mt-[55px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-[41px] lg:gap-0">
                 <div className="separator w-[1px] left-[calc(100%/3)] absolute h-[70%] bg-[#CACACA] hidden lg:block"></div>
                 <div className="separator w-[1px] right-[30%] absolute h-[70%] bg-[#CACACA] hidden lg:block"></div>

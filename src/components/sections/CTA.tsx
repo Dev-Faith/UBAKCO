@@ -13,7 +13,7 @@ const CTA = ({
     <div className={`relative z-[2] w-full bg-white flex justify-center ${className}`}>
       <div className="max-w-[1440px] w-full px-[16px] sm:px-[60px]">
         <div
-          className={`flex w-full max-w-[1440px] rounded-[32px] lg:rounded-[16px] sm:w-full sm:h-full overflow-hidden flex-col items-center relative bg-green-200 ${offset}`}
+          className={`flex w-full max-w-[1440px] rounded-[32px] lg:rounded-[16px] sm:w-full sm:h-full overflow-hidden flex-col items-center relative ${offset}`}
         >
           <Image
             src="/images/CTA.png"

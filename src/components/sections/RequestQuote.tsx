@@ -21,7 +21,7 @@ const RequestQuote = ({className, formOffset=true, bg="white"}:{className?:strin
   return (
     <section id="requestQuote" className={`min-w-screen bg-${bg} flex justify-center ${className}`}>
       <div className="lg:flex justify-center  w-full max-w-[1440px] px-[16px] sm:px-[60px]">
-        <div className={`flex flex-col items-center  w-full bg-red-200  relative ${formOffset ? "top-[calc(297px-650px)]" : ""} lg:rounded-[32px]`}>
+        <div className={`flex flex-col items-center  w-full  relative ${formOffset ? "top-[calc(297px-650px)]" : ""} lg:rounded-[32px]`}>
           <Image
             src="/images/request.png"
             alt="Call to Action"
@@ -47,7 +47,7 @@ const RequestQuote = ({className, formOffset=true, bg="white"}:{className?:strin
               </motion.p>
             </div>
           </div>
-          <div className=" w-[30px] sm:w-full bg-red-200 flex items-center justify-center">
+          <div className=" w-[30px] sm:w-full flex items-center justify-center">
              <QuoteRequestForm className="absolute lg:right-[5%] lg:top-[10%] top-[70px]" />
           </div>
         </div>

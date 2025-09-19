@@ -49,14 +49,14 @@ export default function Whatdrives() {
               <motion.p
                 initial={{ opacity: 0, y: 40 }}
                 animate={controls}
-                className="text-[18px]/[27px] font-sans font-[400] tracking-[0.05em] text-[#656565]"
+                className="text-[18px]/[27px] font-sans font-[400] tracking-[-0.02em] text-[#656565]"
               >
                 {drive.desc}
               </motion.p>
             </div>
           ))}
         </div>
-        <Image src="/images/Logomark.png" alt="What Drives Ubacko" height={100} width={100} className="absolute lg:top-[-50%] lg:right-0 top-0 right-0 soft-light-effect w-[289px] h-[274px] lg:w-[567px] lg:h-[537.62px]" />
+        <Image src="/images/Logomark.png" alt="What Drives Ubacko" height={100} width={100} className="absolute lg:top-[-50%] lg:right-0 top-0 right-0 soft-light-effect w-[150px] h-[200px] lg:w-[567px] lg:h-[537.62px]" />
       </section>
     </div>
   );

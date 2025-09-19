@@ -24,14 +24,14 @@ const UbakcoLogistics = () => {
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={controls}
-            className="font-display w-[300px] sm:w-[400px] sm:text-[42px]/[54.6px] lg:w-[434px] text-[32px]/[48px]  lg:text-[42px]/[54.6px] font-bold tracking-[0.02em]"
+            className="font-display w-[300px] sm:w-[400px] sm:text-[42px]/[54.6px] lg:w-[434px] text-[32px]/[48px]  lg:text-[42px]/[54.6px] font-bold tracking-[-0.02em]"
           >
             Ubakco Logistics Concierge
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={controls}
-            className=" text-[18px]/[27px] text-[#656565] sm:w-[540px] lg:text-[28px]/[42px] w-[370px] lg:w-[434px] font-[400] tracking-[-0.02em]"
+            className=" font-sans text-[#323232] text-[14px]/[21px] xl:text-[20px]/[30px] sm:text-[20px]/[30px] sm:w-[485px]"
           >
             Get direct access to a dedicated logistics expert who manages
             everything. From pickups to real-time tracking.

@@ -212,9 +212,9 @@ const Testimonial = () => {
             width={100}
             height={100}
           />
-          <div className="flex flex-col lg:flex-row gap-[24px] ">
-           {
-            testimonialList1.map((item, index) => (
+          {/* Mobile/tablet: flex-col, Desktop: horizontal scroll */}
+          <div className="flex flex-col gap-[24px] lg:hidden">
+            {testimonialList1.map((item, index) => (
               <TestimonialCard
                 key={index}
                 image={item.image}
@@ -223,8 +223,43 @@ const Testimonial = () => {
                 name={item.name}
                 office={item.office}
               />
-            ))
-           }
+            ))}
+          </div>
+          <div
+            className="testimonial-scroll hidden lg:block w-full overflow-hidden relative"
+            style={{ height: '340px' }}
+          >
+            <div
+              className="flex gap-[32px] testimonial-track"
+              style={{
+                animation: 'testimonialScroll 40s linear infinite',
+                display: 'flex',
+                minWidth: 'max-content',
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.animationPlayState = 'paused';
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.animationPlayState = 'running';
+              }}
+            >
+              {[...testimonialList1, ...testimonialList1].map((item, index) => (
+                <TestimonialCard
+                  key={index}
+                  image={item.image}
+                  rating={item.rating}
+                  quote={item.quote}
+                  name={item.name}
+                  office={item.office}
+                />
+              ))}
+            </div>
+            <style>{`
+              @keyframes testimonialScroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+            `}</style>
           </div>
           <Image
             src="/images/testShadowRight.png"

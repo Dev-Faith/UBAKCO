@@ -26,7 +26,7 @@ const WedLove = () => {
         <h1 className=" text-[32px]/[48px] sm:w-[500px] sm:text-[42px]/[54.6px] lg:text-[42px]/[54.6px] tracking-[-0.02em] w-[249px] lg:w-[447px] font-bold font-display">
           We’d love to hear from you
         </h1>
-        <p className="text-[#323232] text-[18px]/[27px] tracking-[-0.02em] lg:text-[24px]/[36px] w-[370px] lg:w-[631px] sm:w-full sm:text-[28px]/[42px]">
+        <p className="font-sans text-[#323232] text-[14px]/[21px] xl:text-[20px]/[30px] sm:text-[20px]/[30px] sm:w-[485px]">
           Whether you’re requesting a quote, tracking a delivery, or exploring
           premium logistics solutions. Our team is ready to assist.
         </p>

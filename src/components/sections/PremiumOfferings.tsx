@@ -72,7 +72,7 @@ const PremiumOfferings = () => {
             <motion.p
               initial={{ opacity: 0, y: 40 }}
               animate={controls}
-              className="font-sans text-[#656565] lg:text-[28px]/[42px] text-[18px]/[27px] lg:w-[516px]"
+              className="font-sans text-[#323232] text-[14px]/[21px] xl:text-[20px]/[30px] sm:text-[20px]/[30px] sm:w-[485px]"
             >
               Ubakco offers tailored logistics built on trust and performance.
               Every delivery, big or small is managed with the precision our

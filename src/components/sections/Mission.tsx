@@ -56,7 +56,7 @@ const Mission = () => {
   }, [inView, controls]);
 
   return (
-    <section className="sticky relative top-0 h-screen pb-[120px]  lg:top-0  z-[1] .mission lg:min-h-[calc(100vh+10%)] lg:h-screen pt-[120px] lg:pt-[120px] bg-white rounded-tl-[50px] rounded-tr-[50px] flex lg:items-center lg:justify-center w-full">
+    <section className="sticky relative top-0 lg:h-full pb-[200px] lg:top-0  z-[1] .mission lg:min-h-[calc(100vh+10%)] lg:h-screen pt-[60px] sm:pt-[120px] bg-white rounded-tl-[50px] rounded-tr-[50px] flex lg:items-center lg:justify-center w-full">
       <div className="flex flex-col lg:flex-row h-full px-[16px] sm:px-[60px] max-h-[1029px] h-full  items-start justify-between w-full max-w-[1440px] mx-auto relative">
         <div
           ref={ref}
@@ -78,7 +78,12 @@ const Mission = () => {
             logistics, Ubakco provides secure, efficient, and time-critical
             delivery solutions across Nigeria and beyond.
           </motion.p>
-          <Button type="button" className="w-[209px] h-[55px] flex items-center gap-[12px] z-[24]" fn="link" href="/about">
+          <Button
+            type="button"
+            className="w-[209px] h-[55px] flex items-center gap-[12px] z-[24]"
+            fn="link"
+            href="/about"
+          >
             Our Mission{" "}
             <Image
               src="/icons/arrow-angled.png"
@@ -88,7 +93,13 @@ const Mission = () => {
             />
           </Button>
         </div>
-      <Image src="/images/mission.png" alt="mission" width={592.75} height={554.41} className="relative sm:w-[592.75px] sm:h-[554.41px] top-0 left-0 lg:hidden z-[24] w-[371px] h-[377.9px] mt-[67px]"/>
+        <Image
+          src="/images/mission.png"
+          alt="mission"
+          width={592.75}
+          height={554.41}
+          className="relative sm:w-[592.75px] sm:h-[554.41px] top-0 left-0 lg:hidden z-[24] w-[371px] h-[377.9px] mt-[67px]"
+        />
         <div className=" lg:h-[80%] w-full lg:flex-row flex-col lg:items-end relative hidden lg:flex">
           <div className=" h-full w-full mission-right max-h-[377.9px] w-max-[371px] lg:max-w-[753px] sm:max-w-[753px] flex relative flex items-center justify-end ">
             <MissionCard
@@ -112,7 +123,7 @@ const Mission = () => {
                 className="absolute"
               />
             ))}
-          </div> 
+          </div>
         </div>
       </div>
     </section>

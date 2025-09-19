@@ -38,7 +38,7 @@ export default function Hero() {
                <motion.h1
                 initial={{ opacity: 0, y: 40 }}
                 animate={controls}
-                className="font-display text-[32px]/[41.6px] xl:text-[75px]/[82px] font-bold text-[#1C1C1C] tracking-[-0.02em] sm:w-[485px] sm:text-[60px]/[74px]"
+                className="font-display text-[32px]/[41.6px] xl:text-[75px]/[82px] w-[265px] font-bold text-[#1C1C1C] tracking-[-0.02em] sm:w-[485px] sm:text-[60px]/[74px]"
               >
                 Ubakco delivers from airport to anywhere
               </motion.h1>

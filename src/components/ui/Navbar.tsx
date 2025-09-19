@@ -74,7 +74,7 @@ export function Navbar() {
               asChild 
               className={cn(
                 navigationMenuTriggerStyle(),
-                "focus:bg-transparent focus:text-inherit font-[400] focus-visible:ring-0 focus-visible:outline-none focus:ring-0 hover:bg-red-0 px-0 outline-none",
+                "focus:bg-transparent focus:text-inherit font-[400] hover:text-[#EA5C2B] focus-visible:ring-0 focus-visible:outline-none focus:ring-0 hover:bg-red-0 px-0 outline-none",
                 pathname === item.href && "text-[#EA5C2B]  border-b-2 border-[#EA5C2B] bg-transparent hover:bg-transparent rounded-b-[4px]"
               )}
             >

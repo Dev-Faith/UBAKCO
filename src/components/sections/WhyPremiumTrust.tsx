@@ -100,17 +100,25 @@ const WhyPremiumTrust = () => {
     // Animate
     const totalWidth = fullArray.length * (itemWidth + gap);
     gsap.set(el, { x: 0 });
-    gsap.to(el, {
+    // Minimal speed: increase duration
+    const tween = gsap.to(el, {
       x: `-=${totalWidth / 2}`,
-      duration: 18 * (fullArray.length / imageCarousel.length) / 2,
+      duration: 60 * (fullArray.length / imageCarousel.length) / 2, // much slower
       ease: "linear",
       repeat: -1,
       modifiers: {
         x: gsap.utils.unitize(x => parseFloat(x) % -(totalWidth / 2))
       }
     });
+    // Pause on hover
+    const pause = () => tween.pause();
+    const play = () => tween.play();
+    el.addEventListener('mouseenter', pause);
+    el.addEventListener('mouseleave', play);
     return () => {
       gsap.killTweensOf(el);
+      el.removeEventListener('mouseenter', pause);
+      el.removeEventListener('mouseleave', play);
     };
   }, []);
 

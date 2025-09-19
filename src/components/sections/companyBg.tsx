@@ -31,7 +31,7 @@ const CompanyBg = () => {
           >
             Company Background
           </motion.h1>
-          <div className="flex flex-col gap-[32px] text-[20px]/[30px] sm:w-full lg:text-[28px]/[48px] font-sans tracking-[0.02em] text-[#323232]">
+          <div className="flex flex-col gap-[32px] text-[18px]/[27px] sm:w-full lg:text-[24px]/[36px] font-sans tracking-[-0.02em] text-[#323232]">
             <motion.p
               initial={{ opacity: 0, y: 40 }}
               animate={controls}
