@@ -204,7 +204,7 @@ const Testimonial = () => {
             />
           </div>
         </div>
-        <div className="w-full mt-[100px] relative h-full min-h-[648px] pb-[120px] lg:pb-0">
+        <div className="w-full mt-[100px] relative h-full min-h-[648px] pb-[60px] lg:pb-0">
           <Image
             src="/images/testShadowLeft.png"
             alt="Shadow Left"
@@ -214,7 +214,7 @@ const Testimonial = () => {
           />
           {/* Mobile/tablet: flex-col, Desktop: horizontal scroll */}
           <div className="flex flex-col gap-[24px] lg:hidden">
-            {testimonialList1.map((item, index) => (
+            {testimonialList1.slice(0, 3).map((item, index) => (
               <TestimonialCard
                 key={index}
                 image={item.image}

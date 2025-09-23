@@ -103,7 +103,7 @@ const Trusted = () => {
 
   return (
     <section className=" relative z-[2] w-full flex justify-center bg-white">
-      <div className="mt-[130px] w-full max-w-[1440px] mx-auto relative pb-[150px] px-[16px] sm:px-[60px] ">
+      <div className=" mt-[32px] sm:mt-[60px] w-full max-w-[1440px] mx-auto relative pb-[128px] sm:pb-[150px] px-[16px] sm:px-[60px] ">
         <div ref={ref} className="flex flex-col gap-[24px] lg:gap-[32px]">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -126,7 +126,7 @@ const Trusted = () => {
             alt="Left Shadow"
             width={100}
             height={100}
-            className="object-cover absolute left-0 z-10"
+            className="object-cover absolute left-[-16px] z-10"
           />
           <div className="relative w-full overflow-hidden" style={{ maxWidth: '100vw' }}>
             <div
@@ -140,7 +140,7 @@ const Trusted = () => {
                   key={key + '-' + idx}
                   className="flex items-center justify-center flex-shrink-0"
                 >
-                  <Component className="text-[100px] text-[#848484] size-[28px] sm:size-[56px] object-cover" />
+                  <Component className="text-[100px] text-[#848484] size-[42px]  sm:size-[56px] object-cover" />
                 </div>
               ))}
             </div>
@@ -150,7 +150,7 @@ const Trusted = () => {
             alt="Right Shadow"
             width={100}
             height={100}
-            className="object-cover absolute -right-2 z-10"
+            className="object-cover absolute right-[-32px] z-10"
           />
         </div>
       </div>

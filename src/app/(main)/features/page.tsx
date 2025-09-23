@@ -15,7 +15,7 @@ const page = () => {
       <RequestQuote />
       <UbakcoLogistics />
       <WhyPremiumTrust />
-      <CTA />
+      <CTA className="my-[-128px] lg:my-0"/>
       <Footer />
     </div>
   )

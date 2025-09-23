@@ -62,7 +62,7 @@ const AboutusTrusted = () => {
 
   return (
     <div className="w-full bg-white flex justify-center">
-      <section className="max-w-[1440px] w-full pt-[120px] px-[16px] sm:px-[60px] lg:pl-[60px]">
+      <section className="max-w-[1440px] w-full py-[64px] sm:pt-[120px] px-[16px] sm:px-[60px] lg:pl-[60px]">
         <div ref={ref}>
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -99,20 +99,20 @@ const AboutusTrusted = () => {
           </button>
           <div
             ref={carouselRef}
-            className="about-carousel flex flex-col lg:flex-row items-center gap-[32px] pb-[138px] lg:overflow-x-auto overflow-y-hidden lg:pr-[40px] hide-scrollbar"
+            className="about-carousel flex flex-col lg:flex-row items-center gap-[32px] pb-[64px] lg:overflow-x-auto overflow-y-hidden lg:pr-[40px] hide-scrollbar"
             style={{ scrollBehavior: 'smooth' }}
           >
             {carouselItems.map((items, index) => (
               <div
                 key={index}
-                className="relative px-[20px] lg:px-[40px] py-[16px] sm:py-[60px] text-white min-h-[490px] w-full sm:h-[812px] lg:min-w-[596px] lg:min-h-[512px] flex flex-col justify-between"
+                className="relative px-[20px] lg:px-[40px] py-[16px] sm:py-[60px] text-white min-h-[343px] w-full sm:h-[568px] lg:min-w-[596px] lg:min-h-[358px] flex flex-col justify-between"
               >
                 <Image
                   src={items.image}
                   alt={items.title}
                   width={500}
                   height={300}
-                  className="rounded-[40px] top-0 left-0 w-full h-full object-cover absolute w-[350px] lg:w-[596px] h-[490px] sm:h-[812px]"
+                  className="rounded-[40px] top-0 left-0 w-full h-full object-cover absolute w-[350px] lg:w-[596px] h-[343px] sm:h-[568px]"
                 />
                 <div className="flex items-center justify-between z-[1]">
                   <p className=" text-[24px]/36px] sm:text-[40px]/[42px] sm:w-full w-[190px] lg:w-full tracking-[0.05em] font-semibold font-display line-clamp-2">

@@ -124,7 +124,7 @@ const WhyPremiumTrust = () => {
 
   return (
     <div className="w-full bg-white flex justify-center">
-      <section className="max-w-[1440px] w-full pt-[120px] px-[16px] sm:px-[60px] pb-[420px]">
+      <section className="max-w-[1440px] w-full sm:pt-[120px] pt-[80px] px-[16px] sm:px-[60px] pb-[420px]">
         <h1 className="font-display text-[32px]/[48px] lg:text-[42px]/[54.6px] sm:text-[42px]/[54.6px] sm:w-[500px] tracking-[-0.02em] font-bold w-[370px] lg:w-[717px]">
         Why Premium Clients Trust Ubakco?
       </h1>

@@ -56,7 +56,7 @@ const PremiumOfferings = () => {
 
   return (
     <div className="w-full bg-[#EFEFEF] flex justify-center z-9">
-      <section className="max-w-[1440px] w-full rounded-tl-[50px]  pb-[514px] rounded-tr-[50px]  px-[16px] sm:px-[60px] overflow-hidden">
+      <section className="max-w-[1440px] w-full rounded-tl-[50px] pb-[350px]  sm:pb-[514px] rounded-tr-[50px]  px-[16px] sm:px-[60px] overflow-hidden">
         <div className="relative  lg:pt-[150px] pt-[70px] flex items-start justify-between overflow-hidden z-9">
           <div
             ref={ref}
@@ -89,7 +89,7 @@ const PremiumOfferings = () => {
             />
           </div>
         </div>
-        <div className=" w-full mt-[54px] lg:mt-[100px] sm:mt-[0px] flex justify-center">
+        <div className=" w-full lg:mt-[100px] sm:mt-[0px] flex justify-center">
           <div className="separator w-full mx-auto lg:border-t border-[#CACACA] py-[75px] lg:grid lg:grid-cols-2 lg:gap-y-[115px] flex flex-col relative justify-center ">
             {featuresCardItems.map((item, index) => (
               <div

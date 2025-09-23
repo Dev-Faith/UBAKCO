@@ -25,7 +25,13 @@ const navItems = [
   { href: "/contact", label: "Contact us" },
 ];
 
-export default function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
+export default function MobileMenu({
+  open,
+  onClose,
+}: {
+  open: boolean;
+  onClose: () => void;
+}) {
   useLockBodyScroll(open);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -58,39 +64,41 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="w-full max-w-[400px] h-[100dvh] bg-[#EFEFEF] shadow-xl p-[16px] sm:p-[60px] flex flex-col justify-between"
             >
-            <div>
-              <button
-                className="self-end text-3xl font-bold mb-8 text-[#EA5C2B] hover:text-black transition-colors"
-                onClick={onClose}
-                aria-label="Close menu"
-              >
-                ×
-              </button>
-              <nav className="flex flex-col justify-between mt-8 h-full">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-[20px] font-semibold text-black hover:text-black transition-colors py-2 px-2 rounded"
-                    onClick={onClose}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-            <div className="flex flex-col gap-4 w-full mt-8">
-             <Button
-            variant="secondary"
-            className="relative overflow-hidden cursor-pointer"
-          >
-            Track package{" "}
-            <div className="absolute top-0 left-0 text-[5px]/[6px] font-[400] font-sans text-white bg-[#9494FF] rounded-br-[5px] px-[6px] py-[2px]">
-              Coming soon
-            </div>
-          </Button>
-          <Button fn="quote" className="ml-2 cursor-pointer">Request a Quote</Button>
-            </div>
+              <div>
+                <button
+                  className="self-end text-3xl font-bold mb-8 text-[#EA5C2B] hover:text-black transition-colors"
+                  onClick={onClose}
+                  aria-label="Close menu"
+                >
+                  ×
+                </button>
+                <nav className="flex flex-col justify-between mt-8 h-full">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="text-[20px] font-semibold text-black hover:text-black transition-colors py-2 px-2 rounded"
+                      onClick={onClose}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </nav>
+              </div>
+              <div className="flex flex-col gap-4 w-full mt-8">
+                <Button
+                  variant="outline"
+                  className="relative overflow-hidden cursor-pointer"
+                >
+                  Track package{" "}
+                  <div className="absolute top-0 left-0 text-[10px]/[6px] font-[400] font-sans text-white bg-[#9494FF]  rounded-br-[5px] px-[6px] py-[4px]">
+                    Coming soon
+                  </div>
+                </Button>
+                <Button fn="quote" className="ml-2 cursor-pointer">
+                  Request a Quote
+                </Button>
+              </div>
             </motion.div>
           </motion.div>
         )}

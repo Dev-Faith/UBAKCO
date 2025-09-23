@@ -1,5 +1,6 @@
 "use client";
 import { motion, useAnimation, useInView } from "framer-motion";
+import Image from "next/image";
 import React, { useRef, useEffect } from "react";
 
 const CompanyBg = () => {
@@ -55,7 +56,9 @@ const CompanyBg = () => {
             </motion.p>
           </div>
         </div>
-        <div className="bg-[#D9D9D9] h-[436px] sm:h-[772px] lg:h-[390px] w-[370px] lg:w-[550px] rounded-[40px] w-full sm:rounded-[40px]"></div>
+        <div className="bg-[#D9D9D9] relative h-[436px] sm:h-[772px] lg:h-[390px] w-[370px] lg:w-[550px] rounded-[40px] w-full sm:rounded-[40px]">
+          <Image src="/images/compBg.png" alt="compBg" fill className="object-cover rounded-[40px]"/>
+        </div>
       </section>
     </div>
   );

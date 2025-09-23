@@ -18,7 +18,7 @@ const UbakcoLogistics = () => {
 
   return (
     <div className="w-full bg-[#EFEFEF] flex justify-center">
-  <section className="max-w-[1440px] w-full px-[16px] sm:px-[60px] lg:px-[60px] py-[120px]">
+  <section className="max-w-[1440px] w-full px-[16px] sm:px-[60px] lg:px-[60px] py-[70px] sm:py-[120px]">
   <div className="flex items-center sm:items-start lg:justify-between gap-[100px] flex-col lg:flex-row">
   <div ref={ref} className="flex flex-col gap-[24px] sm:gap-[64px] lg:gap-[64px] ">
           <motion.h1

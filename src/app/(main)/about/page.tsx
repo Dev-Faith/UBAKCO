@@ -16,7 +16,7 @@ export default function AboutPage() {
       <Statistics />
       <AboutusTrusted />
       <CertAndComp />
-      <CTA />
+      <CTA className="mb-[-128px] lg:mb-0"/>
       <Footer />
     </main>
   );

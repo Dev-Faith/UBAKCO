@@ -22,14 +22,14 @@ export default function Hero() {
   return (
     <section className="sticky top-0 bg-[#DCDEE0] min-w-screen h-screen 2xl:h-[872px] flex overflow-hidden z-[1] justify-center">
       <div className="w-full flex justify-center items-center">
-        <div className="lg:flex w-full lg:w-full mx-auto">
+        <div className="lg:flex w-full lg:w-full mx-auto ">
           <Image
             src="/images/gradient.png"
             alt="gradient"
             fill
             className="object-cover fixed pointer-events-none z-[8]"
           />
-          <div className="left-hero w-full  max-w-[calc(100vw/2+50vw)] items-center 2xl:pt-[20%] 2xl:pl-[128px] justify-center sm:justify-start  xl:h-full px-[16px] sm:px-[60px] xl:px-[60px] pt-[130%] sm:pt-[120%] xl:pt-[201px] sm:pb-0 flex">
+          <div className="left-hero w-full  max-w-[calc(100vw/2+50vw)] items-center 2xl:pt-[20%] 2xl:pl-[128px] justify-center sm:justify-start  xl:h-full px-[16px] sm:px-[60px] xl:px-[60px] pt-[130%] sm:pt-[120%] xl:pt-[201px] sm:pb-0">
             <div
               ref={ref}
               className="absolute inset-0 flex flex-col lg:flex-row lg:justify-center items-center mt-[138px]"
@@ -63,7 +63,7 @@ export default function Hero() {
              </div>
             </div>
           </div>
-          <div className="sm:h-[50%] h-full xl:h-full w-full flex relative overflow-hidden">
+          <div className="sm:h-[50%] h-[50vh] xl:h-full w-full flex relative overflow-hidden">
             <Image
               src="/images/stepper.png"
               alt="Hero Image"
@@ -76,7 +76,7 @@ export default function Hero() {
               alt="Hero Image"
               width={725}
               height={1024}
-              className="w-full h-full lg:hidden aboslute mt-[92px] top-[-64px] xl:mt-0 xl:top-[64px] sm:top-[-30px] pointer-events-none object-cover"
+              className="w-full h-full lg:hidden relative mt-[92px] top-[-88px] xl:mt-0 xl:top-[64px] sm:top-[-30px] pointer-events-none object-cover"
             />
             {/* <Image
               src="/images/dash.png"

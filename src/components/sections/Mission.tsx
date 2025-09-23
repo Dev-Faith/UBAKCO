@@ -56,7 +56,7 @@ const Mission = () => {
   }, [inView, controls]);
 
   return (
-    <section className="sticky relative top-0 lg:h-full pb-[200px] lg:top-0  z-[1] .mission lg:min-h-[calc(100vh+10%)] lg:h-screen pt-[60px] sm:pt-[120px] bg-white rounded-tl-[50px] rounded-tr-[50px] flex lg:items-center lg:justify-center w-full">
+    <section className=" sm:sticky relative top-0 lg:h-full pb-[128px] sm:pb-[200px] lg:top-0  z-[1] .mission lg:min-h-[calc(100vh+10%)] lg:h-screen pt-[60px] sm:pt-[120px] bg-white rounded-tl-[50px] rounded-tr-[50px] flex lg:items-center lg:justify-center w-full">
       <div className="flex flex-col lg:flex-row h-full px-[16px] sm:px-[60px] max-h-[1029px] h-full  items-start justify-between w-full max-w-[1440px] mx-auto relative">
         <div
           ref={ref}

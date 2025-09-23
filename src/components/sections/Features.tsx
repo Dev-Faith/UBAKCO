@@ -54,7 +54,7 @@ export default function Features() {
   }, [inView, controls]);
 
   return (
-    <section className=" relative bg-[#EFEFEF] w-full rounded-tl-[50px] lg:pb-[113px] rounded-tr-[50px] overflow-hidden z-[2] mt-[-32px]">
+    <section className=" relative bg-[#EFEFEF] w-full rounded-tl-[50px] lg:pb-[113px] rounded-tr-[50px] overflow-hidden z-[2] mt-[-64px]">
       <div className="max-w-[1440px] w-full mx-auto px-[16px] sm:px-[60px]">
         <div className="relative lg:pt-[150px] pt-[70px]  flex items-start justify-between overflow-hidden w-full max-w-[1440px] mx-auto">
           <div
@@ -64,7 +64,7 @@ export default function Features() {
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={controls}
-              className=" text-[32px]/[48px] lg:text-[42px]/[54.6px] md:text-[32px]/[41.6px] md:w-[714px] font-bold tracking-[-0.02em] w-[370px] lg:w-[413px] sm:w-[714px] font-display text-[#000000] z-9 "
+              className=" text-[26px]/[33.2px] lg:text-[42px]/[54.6px] md:text-[32px]/[41.6px] md:w-[714px] font-bold tracking-[-0.02em] w-[370px] lg:w-[413px] sm:w-[714px] font-display text-[#000000] z-9 "
             >
               Complete Logistics Solutions
             </motion.h1>
@@ -88,7 +88,7 @@ export default function Features() {
             />
           </div>
         </div>
-        <div className=" w-full mt-[54px] lg:mt-[100px] sm:mt-[0px] flex justify-center">
+        <div className=" w-full mt-0 lg:mt-[100px] sm:mt-[0px] flex justify-center">
           <div className="separator w-full mx-auto lg:border-t border-[#CACACA] py-[75px] lg:grid lg:grid-cols-2 lg:gap-y-[115px] flex flex-col relative justify-center ">
             {featuresCardItems.map((item, index) => (
               <div

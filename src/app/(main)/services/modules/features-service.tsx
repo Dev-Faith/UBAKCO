@@ -53,9 +53,9 @@ export default function Features() {
     },
   ];
   return (
-    <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px] lg:pb-[514px] rounded-tr-[50px] overflow-hidden pb-[490px] mt-[-32px] lg:mt-0 flex justify-center">
+    <section className="bg-[#EFEFEF] 2xl:w-screen rounded-tl-[50px] lg:pb-[514px] rounded-tr-[50px] overflow-hidden pb-[350px] mt-[-128px] lg:mt-0 flex justify-center">
       <div className="w-full px-[16px] sm:px-[60px] max-w-[1440px]">
-        <div className="relative  pt-[110px] pl-[60px] 2xl:pl-[120px]">
+        <div className="relative  sm:pt-[110px] pl-[60px] 2xl:pl-[120px]">
           <div className="overflow-hidden absolute w-[600px] h-[752px] bg-[#EFEFEF] top-0 right-[-64px]">
             <Image
               src="/images/Logomark.png"

@@ -21,8 +21,7 @@ export default function Header() {
         <div className="hidden lg:flex">
           <Button
             variant="secondary"
-            disabled
-            className="relative overflow-hidden cursor-pointer"
+            className="relative overflow-hidden cursor-not-allowed pointer-events-none"
           >
             Track order{" "}
             <div className="absolute top-0 left-0 text-[10px]/[6px] font-[400] font-sans text-white bg-[#9494FF] rounded-br-[5px] px-[7.74px] py-[5px]">

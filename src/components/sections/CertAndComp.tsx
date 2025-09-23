@@ -12,7 +12,7 @@ const CertAndComp = () => {
   ];
   return (
     <div className="w-full bg-[#EFEFEF] flex justify-center">
-      <section className="max-w-[1440px] w-full pt-[70px] lg:pt-[150px] px-[16px] lg:px-[60px] sm:px-[60px] pb-[358px] relative">
+      <section className="max-w-[1440px] w-full pt-[70px] lg:pt-[150px] px-[16px] lg:px-[60px] sm:px-[60px] pb-[270px] lg:pb-[358px] relative">
         <Image src="/images/Logomark.png" alt="Logomark" width={100} height={100}  className="absolute hidden sm:w-[312px] sm:h-[296px] sm:block lg:block top-0 right-0 soft-light-effect w-[567px] h-[537.62px]"/>
         <h2 className=" text-[32px]/[48px] lg:text-[42px]/[54.6px] sm:text-[42px]/[54.6px]  font-bold font-display tracking-[-0.02em] w-[368px] lg:w-[400px]">
         Certifications & Compliance
