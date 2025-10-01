@@ -1,7 +1,7 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const whatsappNumber = "08169494128";
+const whatsappNumber = "08033706081";
 const whatsappLink = `https://wa.me/234${whatsappNumber.slice(1)}`;
 
 const WhatsAppFloatingButton = () => (

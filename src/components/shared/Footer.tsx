@@ -94,9 +94,15 @@ export default function Footer() {
                   Follow Us
                 </h1>
                 <div className="flex gap-[32px] text-[24px] ">
-                  <FaFacebookF className="text-[#B2B2B2] hover:text-white" />
-                  <FaInstagram className="text-[#B2B2B2] hover:text-white" />
-                  <FaXTwitter className="text-[#B2B2B2] hover:text-white" />
+                  <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <FaFacebookF className="text-[#B2B2B2] hover:text-white cursor-pointer" />
+                  </Link>
+                  <Link href="https://www.instagram.com/ubakcosendingng?igsh=cDJobHN3ZzlpaG1q&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram className="text-[#B2B2B2] hover:text-white cursor-pointer" />
+                  </Link>
+                  <Link href="https://x.com/ubakcosendingng?s=11" target="_blank" rel="noopener noreferrer">
+                    <FaXTwitter className="text-[#B2B2B2] hover:text-white cursor-pointer" />
+                  </Link>
                 </div>
               </div>
             </div>

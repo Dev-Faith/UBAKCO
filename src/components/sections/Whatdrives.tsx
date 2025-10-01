@@ -34,7 +34,7 @@ export default function Whatdrives() {
           animate={controls}
           className="w-[198px] lg:w-[265px] font-semibold sm:font-bold text-[32px]/[48px] lg:text-[42px]/[54.6px] font-display tracking-[-0.02em] sm:text-[42px]/[54.6px] sm:w-[265px]"
         >
-          What Drives Ubacko
+          What Drives Ubakco
         </motion.h1>
         <div className="flex flex-col  lg:flex-row items-center sm:items-start gap-[24px] lg:justify-between mt-[70px]">
           {driveList.map((drive, index) => (

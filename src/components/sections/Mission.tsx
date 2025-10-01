@@ -74,7 +74,7 @@ const Mission = () => {
             animate={controls}
             className=" w-[370px] lg:w-[516px] text-[#656565] sm:max-w-[617px] sm:w-full sm:text-[20px]/[30px] font-sans text-[18px]/[27px] font-regular tracking-[-0.02em]"
           >
-            From airport-to-airport shipments to executive white-glove
+            From airport-to-doorstep shipments to executive white-glove
             logistics, Ubakco provides secure, efficient, and time-critical
             delivery solutions across Nigeria and beyond.
           </motion.p>
