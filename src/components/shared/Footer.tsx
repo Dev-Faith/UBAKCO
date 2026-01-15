@@ -62,7 +62,7 @@ export default function Footer() {
                 )}
               </nav>
             </div>
-            <div>
+            {/* <div>
               <p className="font-display text-[24px] font-semibold text-[#ffffff]">
                 Services
               </p>
@@ -77,7 +77,7 @@ export default function Footer() {
                   </Link>
                 ))}
               </nav>
-            </div>
+            </div> */}
             <div>
               <p className="font-display text-[24px] font-semibold text-[#ffffff]">
                 Busines Hours
