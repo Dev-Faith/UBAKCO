@@ -14,7 +14,7 @@ if (typeof window !== 'undefined') {
 
 const MapClient = () => {
   // MM1 (Murtala Muhammed International Airport) coordinates
-  const mm1Coords = [6.5774, 3.3212];
+  const mm1Coords: [number, number] = [6.5774, 3.3212];
   return (
     <MapContainer center={mm1Coords} zoom={15} scrollWheelZoom={true} style={{ height: '600px', width: '100%', borderRadius: '16px' }}>
       <TileLayer
