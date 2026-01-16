@@ -3,21 +3,30 @@ import React from "react";
 import { Button } from "../ui/buttons/Button";
 import Image from "next/image";
 
+
+interface addressProps {
+  title: string;
+  desc: string;
+  desc2?: string
+}
+
 const WedLove = () => {
-  const address = [
+  const address: addressProps[] = [
     {
       title: "Office Address",
       desc: "Cargo Village, GAT 2,Murtala Mohammed Airport, Ikeja, Lagos Nigeria",
     },
     {
       title: "Email",
-      desc: "emmaubak@gmail.com",
+      desc: "info@ubakcosending.com",
     },
     {
       title: "Phone",
-      desc: "+234 803 370 6085",
+      desc: "08033706081",
+      desc2: "07041697209",
     },
   ];
+
   return (
     <div className="w-full bg-[#EDEDED] flex justify-center">
       <section className="max-w-[1440px] w-full pt-[70px] lg:pt-[150px] px-[16px] sm:px-[60px] lg:px-[60px] rounded-t-[20px] relative mt-[-24px] pb-[64px] sm:pb-[116px] overflow-hidden">
@@ -44,9 +53,14 @@ const WedLove = () => {
             <h1 className="text-[#EA5C2B] sm:text-[32px]/[42px] font-bold text-[26px]/[42px] lg:text-[32px]/[42px] tracking-[-0.02em] font-display">
               {item.title}
             </h1>
-            <p className="text-[#323232] sm:w-full sm:text-[24px]/[36px] font-[400] tracking-[0.02em] w-[300px] font-sans text-[20px]/[30px] ">
+            <div className="flex flex-col gap-[16px]">
+              <p className="text-[#323232] sm:w-full sm:text-[24px]/[36px] font-[400] tracking-[0.02em] w-[300px] font-sans text-[20px]/[30px] ">
               {item.desc}
             </p>
+            <p className="text-[#323232] sm:w-full sm:text-[24px]/[36px] font-[400] tracking-[0.02em] w-[300px] font-sans text-[20px]/[30px] ">
+              {item.desc2}
+            </p>
+            </div>
             {index === address.length - 1 && (
               <Button fn="quote" className="flex items-center gap-[12px] w-[209px]">
                 {" "}

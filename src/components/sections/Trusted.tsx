@@ -18,7 +18,7 @@ const Trusted = () => {
       // Animate from 0 to -iconSetWidth (left, so icons move right)
       gsap.to(container, {
         x: -iconSetWidth,
-        duration: 10,
+        duration: 100,
         ease: "linear",
         repeat: -1,
         onRepeat: () => {
@@ -32,44 +32,58 @@ const Trusted = () => {
   }, []);
   const companyLogos = [
     {
-      logo: "/images/facebook.png",
-      height: "58.7px",
-      width: "59.06px",
+      logo: "/images/logo1.png",
+      height: 250,
+      width: 250,
+      key: "logo-1",
     },
     {
-      logo: "/images/spotify.png",
-      height: "100px",
-      width: "300px",
+      logo: "/images/logo2.jpeg",
+      height: 250,
+      width: 250,
+      key: "logo-2",
     },
     {
-      logo: "/images/apple.png",
-      height: "58.7px",
-      width: "59.06px",
+      logo: "/images/logo4.jpeg",
+      height: 210,
+      width: 210,
+      key: "logo-4",
     },
     {
-      logo: "/images/facebook.png",
-      height: "58.7px",
-      width: "59.06px",
+      logo: "/images/logo5.png",
+      height: 210,
+      width: 210,
+      key: "logo-5",
     },
     {
-      logo: "/images/apple.png",
-      height: "58.7px",
-      width: "59.06px",
+      logo: "/images/logo6.png",
+      height: 210,
+      width: 210,
+      key: "logo-6",
     },
     {
-      logo: "/images/facebook.png",
-      height: "58.7px",
-      width: "59.06px",
+      logo: "/images/logo7.png",
+      height: 210,
+      width: 210,
+      key: "logo-7",
     },
     {
-      logo: "/images/spotify.png",
-      height: "100px",
-      width: "300px",
+      logo: "/images/logo8.png",
+      height: 210,
+      width: 210,
+      key: "logo-8",
     },
     {
-      logo: "/images/apple.png",
-      height: "58.7px",
-      width: "59.06px",
+      logo: "/images/logo9.png",
+      height: 210,
+      width: 210,
+      key: "logo-9",
+    },
+    {
+      logo: "/images/logo10.png",
+      height: 210,
+      width: 210,
+      key: "logo-10",
     },
   ];
 
@@ -97,7 +111,7 @@ const Trusted = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start({ opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } });
+      controls.start({ opacity: 1, y: 0, transition: { duration:0.7, ease: "easeOut" } });
     }
   }, [inView, controls]);
 
@@ -135,13 +149,15 @@ const Trusted = () => {
               style={{ width: 'max-content' }}
             >
               {/* Duplicate icon list for seamless scroll */}
-              {[...iconComponents, ...iconComponents].map(({ Component, key }, idx) => (
-                <div
+              {[...companyLogos, ...companyLogos, ...companyLogos, ...companyLogos, ...companyLogos].map(({ logo, height, width, key }, idx) => (
+                <Image
+                  src={logo}
+                  alt={`Company Logo ${idx}`}
+                  width={Number(companyLogos[idx % companyLogos.length].width)}
+                  height={Number(companyLogos[idx % companyLogos.length].height)}
                   key={key + '-' + idx}
                   className="flex items-center justify-center flex-shrink-0"
-                >
-                  <Component className="text-[100px] text-[#848484] size-[42px]  sm:size-[56px] object-cover" />
-                </div>
+                />
               ))}
             </div>
           </div>

@@ -190,8 +190,8 @@ const Testimonial = () => {
               animate={controls}
               className="font-sans text-[#656565] text-[18px]/[27px] font-[400] lg:text-[20px]/[30px] w-[370px] md:w-[498px] lg:w-[516px]"
             >
-              Feedback from businesses and individuals who rely on Ubacko for
-              fat, secure, and professional delivery.
+              Feedback from businesses and individuals who rely on Ubakco for
+              fast, secure, and professional delivery.
             </motion.p>
           </div>
           <div className="overflow-hidden absolute w-[600px] h-full bg-[#EFEFEF] top-0 right-[-64px] hidden lg:block">

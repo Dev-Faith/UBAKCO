@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/buttons/Button";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -94,14 +94,17 @@ export default function Footer() {
                   Follow Us
                 </h1>
                 <div className="flex gap-[32px] text-[24px] ">
-                  <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://www.facebook.com/share/1DyywuXVyH/" target="_blank" rel="noopener noreferrer">
                     <FaFacebookF className="text-[#B2B2B2] hover:text-white cursor-pointer" />
                   </Link>
                   <Link href="https://www.instagram.com/ubakcosendingng?igsh=cDJobHN3ZzlpaG1q&utm_source=qr" target="_blank" rel="noopener noreferrer">
                     <FaInstagram className="text-[#B2B2B2] hover:text-white cursor-pointer" />
                   </Link>
-                  <Link href="https://x.com/ubakcosendingng?s=11" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://x.com/UbakcoSendingNg" target="_blank" rel="noopener noreferrer">
                     <FaXTwitter className="text-[#B2B2B2] hover:text-white cursor-pointer" />
+                  </Link>
+                  <Link href="https://www.linkedin.com/in/emmanuel-ubak-8049a1231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="text-[#B2B2B2] hover:text-white cursor-pointer" />
                   </Link>
                 </div>
               </div>

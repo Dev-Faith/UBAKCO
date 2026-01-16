@@ -37,47 +37,47 @@ const WhyPremiumTrust = () => {
 
   const imageCarousel = [
     {
-      src: "/images/c1.png",
+      src: "/images/pre1.png",
       alt: "carousel 1"
     },
     {
-      src: "/images/c2.png",
+      src: "/images/pre2.png",
       alt: "carousel 2"
     },
     {
-      src: "/images/c3.png",
+      src: "/images/pre3.png",
       alt: "carousel 3"
     },
     {
-      src: "/images/c4.png",
+      src: "/images/pre4.png",
       alt: "carousel 4"
     },
     {
-      src: "/images/c5.png",
+      src: "/images/pre5.png",
       alt: "carousel 5"
     },
     {
-      src: "/images/c6.png",
+      src: "/images/pre6.png",
       alt: "carousel 6"
     },
     {
-      src: "/images/c7.png",
+      src: "/images/pre7.png",
       alt: "carousel 7"
     },
     {
-      src: "/images/c8.png",
+      src: "/images/pre2.png",
       alt: "carousel 8"
     },
     {
-      src: "/images/c9.png",
+      src: "/images/pre4.png",
       alt: "carousel 9"
     },
     {
-      src: "/images/c10.png",
+      src: "/images/pre1.png",
       alt: "carousel 10"
     },
     {
-      src: "/images/c11.png",
+      src: "/images/pre7.png",
       alt: "carousel 11"
     },
   ];
