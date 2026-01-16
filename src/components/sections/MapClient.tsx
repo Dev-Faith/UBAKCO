@@ -13,15 +13,17 @@ if (typeof window !== 'undefined') {
 }
 
 const MapClient = () => {
+  // MM1 (Murtala Muhammed International Airport) coordinates
+  const mm1Coords = [6.5774, 3.3212];
   return (
-    <MapContainer center={[6.5244, 3.3792]} zoom={6} scrollWheelZoom={true} style={{ height: '600px', width: '100%', borderRadius: '16px' }}>
+    <MapContainer center={mm1Coords} zoom={15} scrollWheelZoom={true} style={{ height: '600px', width: '100%', borderRadius: '16px' }}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[6.5244, 3.3792]}>
+      <Marker position={mm1Coords}>
         <Popup>
-          Lagos, Nigeria<br /> Ubakco HQ
+          Murtala Muhammed Int'l Airport (MM1)<br />Lagos, Nigeria
         </Popup>
       </Marker>
     </MapContainer>
